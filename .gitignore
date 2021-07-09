@@ -1,0 +1,14 @@
+.dub
+docs.json
+__dummy.html
+docs/
+countries_currencies_languages.so
+countries_currencies_languages.dylib
+countries_currencies_languages.dll
+countries_currencies_languages.a
+countries_currencies_languages.lib
+countries_currencies_languages-test-*
+*.exe
+*.o
+*.obj
+*.lst
