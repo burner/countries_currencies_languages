@@ -6,9 +6,8 @@ import countries_currencies_languages.structures;
 
 @safe:
 Currency[string] getCurrencies() {
-	static bool wasInit = false;
 	static Currency[string] ret;
-	if(!wasInit) {
+	if(!ret) {
 		ret["ADP"] = Currency("ADP", "Andorran Peseta", "", "ADP", 0, 0, Nullable!(int)(20));
 		ret["AED"] = Currency("AED", "United Arab Emirates Dirham", "2", "AED", 2, 0, Nullable!(int)(784));
 		ret["AFA"] = Currency("AFA", "Afghan Afghani (1927–2002)", "", "AFA", 2, 0, Nullable!(int)(4));
@@ -308,7 +307,6 @@ Currency[string] getCurrencies() {
 		ret["ZWD"] = Currency("ZWD", "Zimbabwean Dollar (1980–2008)", "", "ZWD", 0, 0, Nullable!(int)(716));
 		ret["ZWL"] = Currency("ZWL", "Zimbabwean Dollar (2009)", "2", "ZWL", 2, 0, Nullable!(int)(932));
 		ret["ZWR"] = Currency("ZWR", "Zimbabwean Dollar (2008)", "", "ZWR", 2, 0, Nullable!(int)(935));
-		wasInit = true;
 	}
 	return ret;
 }

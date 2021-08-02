@@ -6,9 +6,8 @@ import countries_currencies_languages.structures;
 
 @safe:
 Country[string] getCountries() {
-	static bool wasInit = false;
 	static Country[string] ret;
-	if(!wasInit) {
+	if(!ret) {
 		ret["Taiwan, Province of China"] = Country
 		( "Taiwan, Province of China"
 		, UN
@@ -55625,7 +55624,6 @@ Country[string] getCountries() {
 			]
 			)
 		);
-		wasInit = true;
 	}
 	return ret;
 }
