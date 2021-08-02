@@ -965,13 +965,12 @@ void main() {
 	cf.writeln("import std.typecons : Nullable;\n");
 	cf.writeln("import countries_currencies_languages.structures;\n");
 	cf.writeln("@safe:");
-	cf.write("Currency[string] getCurrencies() {\n\tstatic bool wasInit = false;\n\tstatic Currency[string] ret;\n");
-	cf.write("\tif(!wasInit) {\n");
+	cf.write("Currency[string] getCurrencies() {\n\tstatic Currency[string] ret;\n");
+	cf.write("\tif(!ret) {\n");
 	{
 		auto ctLtw = cf.lockingTextWriter();
 		curs.map!(it => format("\t\tret[\"%s\"] = %s;\n", it.CurrencyCode, it)).copy(ctLtw);
 	}
-	cf.write("\t\twasInit = true;\n");
 	cf.write("\t}\n");
 	cf.write("\treturn ret;\n}\n");
 
@@ -980,13 +979,12 @@ void main() {
 	lf.writeln("module countries_currencies_languages.languages;\n");
 	lf.writeln("import countries_currencies_languages.structures;\n");
 	lf.writeln("@safe:");
-	lf.write("Language[string] getLanguages() {\n\tstatic bool wasInit = false;\n\tstatic Language[string] ret;\n");
-	lf.write("\tif(!wasInit) {\n");
+	lf.write("Language[string] getLanguages() {\n\tstatic Language[string] ret;\n");
+	lf.write("\tif(!ret) {\n");
 	{
 		auto ltLtw = lf.lockingTextWriter();
 		langs.map!(it => format("\t\tret[\"%s\"] = %s;\n", it.ID, it)).copy(ltLtw);
 	}
-	lf.write("\t\twasInit = true;\n");
 	lf.write("\t}\n");
 	lf.write("\treturn ret;\n}\n");
 
@@ -995,13 +993,12 @@ void main() {
 	sf.writeln("import std.typecons : Nullable;\n");
 	sf.writeln("import countries_currencies_languages.structures;\n");
 	sf.writeln("@safe:");
-	sf.write("Country[string] getCountries() {\n\tstatic bool wasInit = false;\n\tstatic Country[string] ret;\n");
-	sf.write("\tif(!wasInit) {\n");
+	sf.write("Country[string] getCountries() {\n\tstatic Country[string] ret;\n");
+	sf.write("\tif(!ret) {\n");
 	{
 		auto stLtw = sf.lockingTextWriter();
 		rslt.map!(it => format("\t\tret[\"%s\"] = %s;\n", it.name, it)).copy(stLtw);
 	}
-	sf.write("\t\twasInit = true;\n");
 	sf.write("\t}\n");
 	sf.write("\treturn ret;\n}\n");
 
@@ -1011,13 +1008,12 @@ void main() {
 	iff.writeln("module countries_currencies_languages.iso639;\n");
 	iff.writeln("import countries_currencies_languages.structures;\n");
 	iff.writeln("@safe:");
-	iff.write("ISO639[string] getISO639() {\n\tstatic bool wasInit = false;\n\tstatic ISO639[string] ret;\n");
-	iff.write("\tif(!wasInit) {\n");
+	iff.write("ISO639[string] getISO639() {\n\tstatic ISO639[string] ret;\n");
+	iff.write("\tif(!ret) {\n");
 	{
 		auto itLtw = iff.lockingTextWriter();
 		iso639.map!(it => format("\t\tret[\"%s\"] = %s;\n", it.alpha3, it)).copy(itLtw);
 	}
-	iff.write("\t\twasInit = true;\n");
 	iff.write("\t}\n");
 	iff.write("\treturn ret;\n}\n");
 

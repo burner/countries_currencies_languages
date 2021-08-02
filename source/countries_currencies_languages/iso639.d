@@ -4,9 +4,8 @@ import countries_currencies_languages.structures;
 
 @safe:
 ISO639[string] getISO639() {
-	static bool wasInit = false;
 	static ISO639[string] ret;
-	if(!wasInit) {
+	if(!ret) {
 		ret["aaa"] = ISO639
 			( ""
 			, "aaa"
@@ -87292,7 +87291,6 @@ ISO639[string] getISO639() {
 			, Type.living
 			, []
 			);
-		wasInit = true;
 	}
 	return ret;
 }

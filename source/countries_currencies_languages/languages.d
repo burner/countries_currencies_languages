@@ -4,9 +4,8 @@ import countries_currencies_languages.structures;
 
 @safe:
 Language[string] getLanguages() {
-	static bool wasInit = false;
 	static Language[string] ret;
-	if(!wasInit) {
+	if(!ret) {
 		ret["af"] = Language("af", "Afrikaans", "Afrikaans", "", "af");
 		ret["af_NA"] = Language("af_NA", "Afrikaans (Namibia)", "Afrikaans (Namibië)", "", "af");
 		ret["af_ZA"] = Language("af_ZA", "Afrikaans (South Africa)", "Afrikaans (Suid-Afrika)", "", "af");
@@ -729,7 +728,6 @@ Language[string] getLanguages() {
 		ret["zh_Hant_TW"] = Language("zh_Hant_TW", "Chinese (Traditional, Taiwan)", "中文（繁體，台灣）", "Traditional Chinese (Taiwan)", "zh");
 		ret["zu"] = Language("zu", "Zulu", "isiZulu", "", "zu");
 		ret["zu_ZA"] = Language("zu_ZA", "Zulu (South Africa)", "isiZulu (iNingizimu Afrika)", "", "zu");
-		wasInit = true;
 	}
 	return ret;
 }
