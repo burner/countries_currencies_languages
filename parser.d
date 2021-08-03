@@ -140,12 +140,12 @@ struct ISO639 {
 	string[] inventedNames;
 
 	string toString() {
-		string ret = "ISO639\n\t\t\t(";
+		string ret = "ISO639\n\t\t(";
 		bool first = true;
 		foreach(mem; __traits(allMembers, ISO639)) {
 			static if(mem != "toString" && mem != "opAssign") {{
 				if(!first) {
-					ret ~= "\n\t\t\t, ";
+					ret ~= "\n\t\t, ";
 				} else {
 					ret ~= " ";
 				}
@@ -166,7 +166,7 @@ struct ISO639 {
 				}}
 			}}
 		}
-		ret ~= "\n\t\t\t)";
+		ret ~= "\n\t\t)";
 		return ret;
 	}
 }
@@ -967,12 +967,14 @@ void main() {
 	cf.writeln("@safe:");
 	cf.write("Currency[string] getCurrencies() {\n\tstatic Currency[string] ret;\n");
 	cf.write("\tif(!ret) {\n");
-	{
-		auto ctLtw = cf.lockingTextWriter();
-		curs.map!(it => format("\t\tret[\"%s\"] = %s;\n", it.CurrencyCode, it)).copy(ctLtw);
-	}
+	cf.write("\t\tforeach (ref cur; allCurrencies)\n");
+	cf.write("\t\t\tret[cur.currencyCode] = cur;\n");
 	cf.write("\t}\n");
-	cf.write("\treturn ret;\n}\n");
+	cf.write("\treturn ret;\n}\n\n");
+	cf.write("static immutable Currency[] allCurrencies = [\n");
+	foreach (ref cur; curs)
+		cf.writefln("\t%s,", cur);
+	cf.write("];\n");
 
 	Language[] langs = parseLanguages();
 	auto lf = File("source/countries_currencies_languages/languages.d", "w");
@@ -981,12 +983,14 @@ void main() {
 	lf.writeln("@safe:");
 	lf.write("Language[string] getLanguages() {\n\tstatic Language[string] ret;\n");
 	lf.write("\tif(!ret) {\n");
-	{
-		auto ltLtw = lf.lockingTextWriter();
-		langs.map!(it => format("\t\tret[\"%s\"] = %s;\n", it.ID, it)).copy(ltLtw);
-	}
+	lf.write("\t\tforeach (ref lang; allLanguages)\n");
+	lf.write("\t\t\tret[lang.id] = lang;\n");
 	lf.write("\t}\n");
-	lf.write("\treturn ret;\n}\n");
+	lf.write("\treturn ret;\n}\n\n");
+	lf.write("static immutable Language[] allLanguages = [\n");
+	foreach (ref lang; langs)
+		lf.writefln("\t%s,", lang);
+	lf.write("];\n\n");
 
 	auto sf = File("source/countries_currencies_languages/countries.d", "w");
 	sf.writeln("module countries_currencies_languages.countries;\n");
@@ -995,12 +999,15 @@ void main() {
 	sf.writeln("@safe:");
 	sf.write("Country[string] getCountries() {\n\tstatic Country[string] ret;\n");
 	sf.write("\tif(!ret) {\n");
-	{
-		auto stLtw = sf.lockingTextWriter();
-		rslt.map!(it => format("\t\tret[\"%s\"] = %s;\n", it.name, it)).copy(stLtw);
-	}
+	sf.write("\t\tforeach (ref country; allCountries)\n");
+	sf.write("\t\t\tret[country.name] = country;\n");
 	sf.write("\t}\n");
-	sf.write("\treturn ret;\n}\n");
+	sf.write("\treturn ret;\n}\n\n");
+	sf.write("@system:\n");
+	sf.write("static immutable Country[] allCountries = cast(immutable) [\n");
+	foreach (ref country; rslt)
+		sf.writefln("\t%s,", country);
+	sf.write("];\n\n");
 
 	ISO639[] iso639 = parseISO639Array();
 
@@ -1010,11 +1017,13 @@ void main() {
 	iff.writeln("@safe:");
 	iff.write("ISO639[string] getISO639() {\n\tstatic ISO639[string] ret;\n");
 	iff.write("\tif(!ret) {\n");
-	{
-		auto itLtw = iff.lockingTextWriter();
-		iso639.map!(it => format("\t\tret[\"%s\"] = %s;\n", it.alpha3, it)).copy(itLtw);
-	}
+	iff.write("\t\tforeach (ref iso639; allISO639)\n");
+	iff.write("\t\t\tret[iso639.alpha3] = iso639;\n");
 	iff.write("\t}\n");
-	iff.write("\treturn ret;\n}\n");
+	iff.write("\treturn ret;\n}\n\n");
+	iff.write("static immutable ISO639[] allISO639 = [\n");
+	foreach (ref a; iso639)
+		iff.writefln("\t%s,", a);
+	iff.write("];\n\n");
 
 }

@@ -19,11 +19,12 @@ unittest {
 	auto sortedLangs = lang.keys().sort;
 	auto cou = getCountries();
 
-	auto sortedLangsInCou = cou.values()
-		.map!(it => it.additional.languages)
+	auto sortedLangsInCou = allCountries[]
+		.map!(it => it.additional.languages[])
 		.joiner
 		.filter!(it => !it.empty)
 		.array
+		.dup // Workaround for element type being immutable.
 		.sort
 		.uniq
 		.array;

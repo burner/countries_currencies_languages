@@ -8,7 +8,15 @@ import countries_currencies_languages.structures;
 Country[string] getCountries() {
 	static Country[string] ret;
 	if(!ret) {
-		ret["Taiwan, Province of China"] = Country
+		foreach (ref country; allCountries)
+			ret[country.name] = country;
+	}
+	return ret;
+}
+
+@system:
+static immutable Country[] allCountries = cast(immutable) [
+	Country
 		( "Taiwan, Province of China"
 		, UN
 			( ""
@@ -257,8 +265,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Afghanistan"] = Country
+		),
+	Country
 		( "Afghanistan"
 		, UN
 			( "أفغانستان"
@@ -595,8 +603,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Albania"] = Country
+		),
+	Country
 		( "Albania"
 		, UN
 			( "ألبانيا"
@@ -1045,8 +1053,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Algeria"] = Country
+		),
+	Country
 		( "Algeria"
 		, UN
 			( "الجزائر"
@@ -1495,8 +1503,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["American Samoa"] = Country
+		),
+	Country
 		( "American Samoa"
 		, UN
 			( "ساموا الأمريكية"
@@ -1562,8 +1570,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Andorra"] = Country
+		),
+	Country
 		( "Andorra"
 		, UN
 			( "أندورا"
@@ -1684,8 +1692,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Angola"] = Country
+		),
+	Country
 		( "Angola"
 		, UN
 			( "أنغولا"
@@ -1894,8 +1902,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Anguilla"] = Country
+		),
+	Country
 		( "Anguilla"
 		, UN
 			( "أنغيلا"
@@ -1961,8 +1969,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Antarctica"] = Country
+		),
+	Country
 		( "Antarctica"
 		, UN
 			( "أنتاركتيكا"
@@ -2028,8 +2036,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Antigua and Barbuda"] = Country
+		),
+	Country
 		( "Antigua and Barbuda"
 		, UN
 			( "أنتيغوا وبربودا"
@@ -2158,8 +2166,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Argentina"] = Country
+		),
+	Country
 		( "Argentina"
 		, UN
 			( "الأرجنتين"
@@ -2408,8 +2416,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Armenia"] = Country
+		),
+	Country
 		( "Armenia"
 		, UN
 			( "أرمينيا"
@@ -2562,8 +2570,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Aruba"] = Country
+		),
+	Country
 		( "Aruba"
 		, UN
 			( "أروبا"
@@ -2629,8 +2637,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Australia"] = Country
+		),
+	Country
 		( "Australia"
 		, UN
 			( "أستراليا"
@@ -2759,8 +2767,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Austria"] = Country
+		),
+	Country
 		( "Austria"
 		, UN
 			( "النمسا"
@@ -2897,8 +2905,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Azerbaijan"] = Country
+		),
+	Country
 		( "Azerbaijan"
 		, UN
 			( "أذربيجان"
@@ -3587,8 +3595,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Bahamas"] = Country
+		),
+	Country
 		( "Bahamas"
 		, UN
 			( "جزر البهاما"
@@ -3901,8 +3909,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Bahrain"] = Country
+		),
+	Country
 		( "Bahrain"
 		, UN
 			( "البحرين"
@@ -4007,8 +4015,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Bangladesh"] = Country
+		),
+	Country
 		( "Bangladesh"
 		, UN
 			( "بنغلاديش"
@@ -4641,8 +4649,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Barbados"] = Country
+		),
+	Country
 		( "Barbados"
 		, UN
 			( "بربادوس"
@@ -4795,8 +4803,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Belarus"] = Country
+		),
+	Country
 		( "Belarus"
 		, UN
 			( "بيلاروس"
@@ -4917,8 +4925,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Belgium"] = Country
+		),
+	Country
 		( "Belgium"
 		, UN
 			( "بلجيكا"
@@ -5087,8 +5095,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Belize"] = Country
+		),
+	Country
 		( "Belize"
 		, UN
 			( "بليز"
@@ -5201,8 +5209,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Benin"] = Country
+		),
+	Country
 		( "Benin"
 		, UN
 			( "بنن"
@@ -5363,8 +5371,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Bermuda"] = Country
+		),
+	Country
 		( "Bermuda"
 		, UN
 			( "برمودا"
@@ -5430,8 +5438,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Bhutan"] = Country
+		),
+	Country
 		( "Bhutan"
 		, UN
 			( "بوتان"
@@ -5656,8 +5664,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Bolivia, Plurinational State of"] = Country
+		),
+	Country
 		( "Bolivia, Plurinational State of"
 		, UN
 			( "بوليفيا (دولة - المتعددة القوميات)"
@@ -5794,8 +5802,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Bonaire, Sint Eustatius and Saba"] = Country
+		),
+	Country
 		( "Bonaire, Sint Eustatius and Saba"
 		, UN
 			( "بونير وسان يوستاتيوس وسابا"
@@ -5884,8 +5892,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Bosnia and Herzegovina"] = Country
+		),
+	Country
 		( "Bosnia and Herzegovina"
 		, UN
 			( "البوسنة والهرسك"
@@ -6054,8 +6062,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Botswana"] = Country
+		),
+	Country
 		( "Botswana"
 		, UN
 			( "بوتسوانا"
@@ -6192,8 +6200,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Bouvet Island"] = Country
+		),
+	Country
 		( "Bouvet Island"
 		, UN
 			( "جزيرة بوفيت"
@@ -6259,8 +6267,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Brazil"] = Country
+		),
+	Country
 		( "Brazil"
 		, UN
 			( "البرازيل"
@@ -6549,8 +6557,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["British Indian Ocean Territory"] = Country
+		),
+	Country
 		( "British Indian Ocean Territory"
 		, UN
 			( "المحيط الهندي الإقليم البريطاني في"
@@ -6616,8 +6624,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Virgin Islands, British"] = Country
+		),
+	Country
 		( "Virgin Islands, British"
 		, UN
 			( "جزر فرجن البريطانية"
@@ -6683,8 +6691,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Brunei Darussalam"] = Country
+		),
+	Country
 		( "Brunei Darussalam"
 		, UN
 			( "بروني دار السلام"
@@ -6781,8 +6789,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Bulgaria"] = Country
+		),
+	Country
 		( "Bulgaria"
 		, UN
 			( "بلغاريا"
@@ -7071,8 +7079,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Burkina Faso"] = Country
+		),
+	Country
 		( "Burkina Faso"
 		, UN
 			( "بوركينا فاسو"
@@ -7601,8 +7609,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Burundi"] = Country
+		),
+	Country
 		( "Burundi"
 		, UN
 			( "بوروندي"
@@ -7795,8 +7803,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Cabo Verde"] = Country
+		),
+	Country
 		( "Cabo Verde"
 		, UN
 			( "كابو فيردي"
@@ -8053,8 +8061,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Cambodia"] = Country
+		),
+	Country
 		( "Cambodia"
 		, UN
 			( "كمبوديا"
@@ -8311,8 +8319,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Cameroon"] = Country
+		),
+	Country
 		( "Cameroon"
 		, UN
 			( "الكاميرون"
@@ -8457,8 +8465,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Canada"] = Country
+		),
+	Country
 		( "Canada"
 		, UN
 			( "كندا"
@@ -8627,8 +8635,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Cayman Islands"] = Country
+		),
+	Country
 		( "Cayman Islands"
 		, UN
 			( "جزر كايمان"
@@ -8694,8 +8702,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Central African Republic"] = Country
+		),
+	Country
 		( "Central African Republic"
 		, UN
 			( "جمهورية أفريقيا الوسطى"
@@ -8896,8 +8904,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Chad"] = Country
+		),
+	Country
 		( "Chad"
 		, UN
 			( "تشاد"
@@ -9138,8 +9146,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Chile"] = Country
+		),
+	Country
 		( "Chile"
 		, UN
 			( "شيلي"
@@ -9324,8 +9332,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["China"] = Country
+		),
+	Country
 		( "China"
 		, UN
 			( "الصين"
@@ -9662,8 +9670,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Hong Kong"] = Country
+		),
+	Country
 		( "Hong Kong"
 		, UN
 			( "منطقة هونغ كونغ الصينية الإدارية الخاصة"
@@ -9729,8 +9737,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Macao"] = Country
+		),
+	Country
 		( "Macao"
 		, UN
 			( "منطقة ماكاو الإدارية الخاصة التابعة للصين"
@@ -9796,8 +9804,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Christmas Island"] = Country
+		),
+	Country
 		( "Christmas Island"
 		, UN
 			( "جزيرة كريسماس"
@@ -9863,8 +9871,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Cocos (Keeling) Islands"] = Country
+		),
+	Country
 		( "Cocos (Keeling) Islands"
 		, UN
 			( "جزر كوكوس (كيلينغ)"
@@ -9930,8 +9938,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Colombia"] = Country
+		),
+	Country
 		( "Colombia"
 		, UN
 			( "كولومبيا"
@@ -10260,8 +10268,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Comoros"] = Country
+		),
+	Country
 		( "Comoros"
 		, UN
 			( "جزر القمر"
@@ -10350,8 +10358,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Congo"] = Country
+		),
+	Country
 		( "Congo"
 		, UN
 			( "الكونغو"
@@ -10504,8 +10512,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Cook Islands"] = Country
+		),
+	Country
 		( "Cook Islands"
 		, UN
 			( "جزر كوك"
@@ -10571,8 +10579,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Costa Rica"] = Country
+		),
+	Country
 		( "Costa Rica"
 		, UN
 			( "كوستاريكا"
@@ -10693,8 +10701,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Croatia"] = Country
+		),
+	Country
 		( "Croatia"
 		, UN
 			( "كرواتيا"
@@ -10927,8 +10935,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Cuba"] = Country
+		),
+	Country
 		( "Cuba"
 		, UN
 			( "كوبا"
@@ -11113,8 +11121,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Curaçao"] = Country
+		),
+	Country
 		( "Curaçao"
 		, UN
 			( "كوراساو"
@@ -11180,8 +11188,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Cyprus"] = Country
+		),
+	Country
 		( "Cyprus"
 		, UN
 			( "قبرص"
@@ -11294,8 +11302,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Czechia"] = Country
+		),
+	Country
 		( "Czechia"
 		, UN
 			( "تشيكيا"
@@ -12256,8 +12264,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Côte d'Ivoire"] = Country
+		),
+	Country
 		( "Côte d'Ivoire"
 		, UN
 			( "كوت ديفوار"
@@ -12474,8 +12482,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Korea, Democratic People's Republic of"] = Country
+		),
+	Country
 		( "Korea, Democratic People's Republic of"
 		, UN
 			( "جمهورية كوريا الشعبية الديمقراطية"
@@ -12628,8 +12636,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Congo, The Democratic Republic of the"] = Country
+		),
+	Country
 		( "Congo, The Democratic Republic of the"
 		, UN
 			( "جمهورية الكونغو الديمقراطية"
@@ -12782,8 +12790,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Denmark"] = Country
+		),
+	Country
 		( "Denmark"
 		, UN
 			( "الدانمرك"
@@ -12888,8 +12896,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Djibouti"] = Country
+		),
+	Country
 		( "Djibouti"
 		, UN
 			( "جيبوتي"
@@ -13002,8 +13010,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Dominica"] = Country
+		),
+	Country
 		( "Dominica"
 		, UN
 			( "دومينيكا"
@@ -13148,8 +13156,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Dominican Republic"] = Country
+		),
+	Country
 		( "Dominican Republic"
 		, UN
 			( "الجمهورية الدومينيكية"
@@ -13454,8 +13462,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Ecuador"] = Country
+		),
+	Country
 		( "Ecuador"
 		, UN
 			( "إكوادور"
@@ -13712,8 +13720,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Egypt"] = Country
+		),
+	Country
 		( "Egypt"
 		, UN
 			( "مصر"
@@ -14002,8 +14010,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["El Salvador"] = Country
+		),
+	Country
 		( "El Salvador"
 		, UN
 			( "السلفادور"
@@ -14180,8 +14188,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Equatorial Guinea"] = Country
+		),
+	Country
 		( "Equatorial Guinea"
 		, UN
 			( "غينيا الاستوائية"
@@ -14318,8 +14326,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Eritrea"] = Country
+		),
+	Country
 		( "Eritrea"
 		, UN
 			( "إريتريا"
@@ -14432,8 +14440,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Estonia"] = Country
+		),
+	Country
 		( "Estonia"
 		, UN
 			( "إستونيا"
@@ -14618,8 +14626,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Eswatini"] = Country
+		),
+	Country
 		( "Eswatini"
 		, UN
 			( "إسواتيني"
@@ -14716,8 +14724,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Ethiopia"] = Country
+		),
+	Country
 		( "Ethiopia"
 		, UN
 			( "إثيوبيا"
@@ -14870,8 +14878,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Falkland Islands (Malvinas)"] = Country
+		),
+	Country
 		( "Falkland Islands (Malvinas)"
 		, UN
 			( "جزر فوكلاند (مالفيناس)"
@@ -14937,8 +14945,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Faroe Islands"] = Country
+		),
+	Country
 		( "Faroe Islands"
 		, UN
 			( "جزر فايرو"
@@ -15004,8 +15012,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Fiji"] = Country
+		),
+	Country
 		( "Fiji"
 		, UN
 			( "فيجي"
@@ -15110,8 +15118,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Finland"] = Country
+		),
+	Country
 		( "Finland"
 		, UN
 			( "فنلندا"
@@ -15328,8 +15336,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["France"] = Country
+		),
+	Country
 		( "France"
 		, UN
 			( "فرنسا"
@@ -16394,8 +16402,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["French Guiana"] = Country
+		),
+	Country
 		( "French Guiana"
 		, UN
 			( "غيانا الفرنسية"
@@ -16461,8 +16469,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["French Polynesia"] = Country
+		),
+	Country
 		( "French Polynesia"
 		, UN
 			( "بولينيزيا الفرنسية"
@@ -16528,8 +16536,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["French Southern Territories"] = Country
+		),
+	Country
 		( "French Southern Territories"
 		, UN
 			( "الأراضي الفرنسية الجنوبية الجنوبية"
@@ -16595,8 +16603,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Gabon"] = Country
+		),
+	Country
 		( "Gabon"
 		, UN
 			( "غابون"
@@ -16733,8 +16741,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Gambia"] = Country
+		),
+	Country
 		( "Gambia"
 		, UN
 			( "غامبيا"
@@ -16847,8 +16855,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Georgia"] = Country
+		),
+	Country
 		( "Georgia"
 		, UN
 			( "جورجيا"
@@ -17009,8 +17017,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Germany"] = Country
+		),
+	Country
 		( "Germany"
 		, UN
 			( "ألمانيا"
@@ -17203,8 +17211,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Ghana"] = Country
+		),
+	Country
 		( "Ghana"
 		, UN
 			( "غانا"
@@ -17349,8 +17357,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Gibraltar"] = Country
+		),
+	Country
 		( "Gibraltar"
 		, UN
 			( "جبل طارق"
@@ -17416,8 +17424,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Greece"] = Country
+		),
+	Country
 		( "Greece"
 		, UN
 			( "اليونان"
@@ -18002,8 +18010,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Greenland"] = Country
+		),
+	Country
 		( "Greenland"
 		, UN
 			( "غرينلند"
@@ -18100,8 +18108,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Grenada"] = Country
+		),
+	Country
 		( "Grenada"
 		, UN
 			( "غرينادا"
@@ -18222,8 +18230,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Guadeloupe"] = Country
+		),
+	Country
 		( "Guadeloupe"
 		, UN
 			( "غواديلوب"
@@ -18289,8 +18297,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Guam"] = Country
+		),
+	Country
 		( "Guam"
 		, UN
 			( "غوام"
@@ -18356,8 +18364,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Guatemala"] = Country
+		),
+	Country
 		( "Guatemala"
 		, UN
 			( "غواتيمالا"
@@ -18598,8 +18606,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Guernsey"] = Country
+		),
+	Country
 		( "Guernsey"
 		, UN
 			( "غيرنزي"
@@ -18665,8 +18673,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Guinea"] = Country
+		),
+	Country
 		( "Guinea"
 		, UN
 			( "غينيا"
@@ -19059,8 +19067,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Guinea-Bissau"] = Country
+		),
+	Country
 		( "Guinea-Bissau"
 		, UN
 			( "غينيا - بيساو"
@@ -19221,8 +19229,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Guyana"] = Country
+		),
+	Country
 		( "Guyana"
 		, UN
 			( "غيانا"
@@ -19367,8 +19375,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Haiti"] = Country
+		),
+	Country
 		( "Haiti"
 		, UN
 			( "هايتي"
@@ -19505,8 +19513,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Heard Island and McDonald Islands"] = Country
+		),
+	Country
 		( "Heard Island and McDonald Islands"
 		, UN
 			( "جزيرة هيرد وجزر ماكدونالد"
@@ -19572,8 +19580,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Holy See (Vatican City State)"] = Country
+		),
+	Country
 		( "Holy See (Vatican City State)"
 		, UN
 			( "الكرسي الرسولي"
@@ -19639,8 +19647,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Honduras"] = Country
+		),
+	Country
 		( "Honduras"
 		, UN
 			( "هندوراس"
@@ -19849,8 +19857,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Hungary"] = Country
+		),
+	Country
 		( "Hungary"
 		, UN
 			( "هنغاريا"
@@ -20259,8 +20267,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Iceland"] = Country
+		),
+	Country
 		( "Iceland"
 		, UN
 			( "آيسلندا"
@@ -20397,8 +20405,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["India"] = Country
+		),
+	Country
 		( "India"
 		, UN
 			( "الهند"
@@ -20751,8 +20759,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Indonesia"] = Country
+		),
+	Country
 		( "Indonesia"
 		, UN
 			( "إندونيسيا"
@@ -21137,8 +21145,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Iran, Islamic Republic of"] = Country
+		),
+	Country
 		( "Iran, Islamic Republic of"
 		, UN
 			( "إيران (جمهورية - الإسلامية)"
@@ -21443,8 +21451,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Iraq"] = Country
+		),
+	Country
 		( "Iraq"
 		, UN
 			( "العراق"
@@ -21653,8 +21661,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Ireland"] = Country
+		),
+	Country
 		( "Ireland"
 		, UN
 			( "آيرلندا"
@@ -21959,8 +21967,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Isle of Man"] = Country
+		),
+	Country
 		( "Isle of Man"
 		, UN
 			( "جزيرة مان"
@@ -22026,8 +22034,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Israel"] = Country
+		),
+	Country
 		( "Israel"
 		, UN
 			( "إسرائيل"
@@ -22140,8 +22148,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Italy"] = Country
+		),
+	Country
 		( "Italy"
 		, UN
 			( "إيطاليا"
@@ -23246,8 +23254,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Jamaica"] = Country
+		),
+	Country
 		( "Jamaica"
 		, UN
 			( "جامايكا"
@@ -23424,8 +23432,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Japan"] = Country
+		),
+	Country
 		( "Japan"
 		, UN
 			( "اليابان"
@@ -23866,8 +23874,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Jersey"] = Country
+		),
+	Country
 		( "Jersey"
 		, UN
 			( "جيرزي"
@@ -23933,8 +23941,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Jordan"] = Country
+		),
+	Country
 		( "Jordan"
 		, UN
 			( "الأردن"
@@ -24095,8 +24103,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Kazakhstan"] = Country
+		),
+	Country
 		( "Kazakhstan"
 		, UN
 			( "كازاخستان"
@@ -24289,8 +24297,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Kenya"] = Country
+		),
+	Country
 		( "Kenya"
 		, UN
 			( "كينيا"
@@ -24731,8 +24739,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Kiribati"] = Country
+		),
+	Country
 		( "Kiribati"
 		, UN
 			( "كيريباس"
@@ -24821,8 +24829,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Kuwait"] = Country
+		),
+	Country
 		( "Kuwait"
 		, UN
 			( "الكويت"
@@ -24935,8 +24943,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Kyrgyzstan"] = Country
+		),
+	Country
 		( "Kyrgyzstan"
 		, UN
 			( "قيرغيزستان"
@@ -25065,8 +25073,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Lao People's Democratic Republic"] = Country
+		),
+	Country
 		( "Lao People's Democratic Republic"
 		, UN
 			( "جمهورية لاو الديمقراطية الشعبية"
@@ -25275,8 +25283,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Latvia"] = Country
+		),
+	Country
 		( "Latvia"
 		, UN
 			( "لاتفيا"
@@ -26293,8 +26301,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Lebanon"] = Country
+		),
+	Country
 		( "Lebanon"
 		, UN
 			( "لبنان"
@@ -26423,8 +26431,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Lesotho"] = Country
+		),
+	Country
 		( "Lesotho"
 		, UN
 			( "ليسوتو"
@@ -26569,8 +26577,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Liberia"] = Country
+		),
+	Country
 		( "Liberia"
 		, UN
 			( "ليبريا"
@@ -26739,8 +26747,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Libya"] = Country
+		),
+	Country
 		( "Libya"
 		, UN
 			( "ليبيا"
@@ -26989,8 +26997,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Liechtenstein"] = Country
+		),
+	Country
 		( "Liechtenstein"
 		, UN
 			( "ليختنشتاين"
@@ -27143,8 +27151,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Lithuania"] = Country
+		),
+	Country
 		( "Lithuania"
 		, UN
 			( "ليتوانيا"
@@ -27289,8 +27297,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Luxembourg"] = Country
+		),
+	Country
 		( "Luxembourg"
 		, UN
 			( "لكسمبرغ"
@@ -27379,8 +27387,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Madagascar"] = Country
+		),
+	Country
 		( "Madagascar"
 		, UN
 			( "مدغشقر"
@@ -27493,8 +27501,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Malawi"] = Country
+		),
+	Country
 		( "Malawi"
 		, UN
 			( "ملاوي"
@@ -27807,8 +27815,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Malaysia"] = Country
+		),
+	Country
 		( "Malaysia"
 		, UN
 			( "ماليزيا"
@@ -28001,8 +28009,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Maldives"] = Country
+		),
+	Country
 		( "Maldives"
 		, UN
 			( "ملديف"
@@ -28291,8 +28299,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Mali"] = Country
+		),
+	Country
 		( "Mali"
 		, UN
 			( "مالي"
@@ -28429,8 +28437,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Malta"] = Country
+		),
+	Country
 		( "Malta"
 		, UN
 			( "مالطة"
@@ -29039,8 +29047,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Marshall Islands"] = Country
+		),
+	Country
 		( "Marshall Islands"
 		, UN
 			( "جزر مارشال"
@@ -29313,8 +29321,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Martinique"] = Country
+		),
+	Country
 		( "Martinique"
 		, UN
 			( "مارتينيك"
@@ -29380,8 +29388,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Mauritania"] = Country
+		),
+	Country
 		( "Mauritania"
 		, UN
 			( "موريتانيا"
@@ -29550,8 +29558,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Mauritius"] = Country
+		),
+	Country
 		( "Mauritius"
 		, UN
 			( "موريشيوس"
@@ -29752,8 +29760,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Mayotte"] = Country
+		),
+	Country
 		( "Mayotte"
 		, UN
 			( "جزيرة مايوت"
@@ -29819,8 +29827,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Mexico"] = Country
+		),
+	Country
 		( "Mexico"
 		, UN
 			( "المكسيك"
@@ -30141,8 +30149,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Micronesia, Federated States of"] = Country
+		),
+	Country
 		( "Micronesia, Federated States of"
 		, UN
 			( "ميكرونيزيا (ولايات - الموحدة)"
@@ -30239,8 +30247,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Monaco"] = Country
+		),
+	Country
 		( "Monaco"
 		, UN
 			( "موناكو"
@@ -30441,8 +30449,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Mongolia"] = Country
+		),
+	Country
 		( "Mongolia"
 		, UN
 			( "منغوليا"
@@ -30683,8 +30691,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Montenegro"] = Country
+		),
+	Country
 		( "Montenegro"
 		, UN
 			( "الجبل الأسود"
@@ -30917,8 +30925,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Montserrat"] = Country
+		),
+	Country
 		( "Montserrat"
 		, UN
 			( "مونتسيرات"
@@ -30984,8 +30992,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Morocco"] = Country
+		),
+	Country
 		( "Morocco"
 		, UN
 			( "المغرب"
@@ -31746,8 +31754,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Mozambique"] = Country
+		),
+	Country
 		( "Mozambique"
 		, UN
 			( "موزامبيق"
@@ -31900,8 +31908,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Myanmar"] = Country
+		),
+	Country
 		( "Myanmar"
 		, UN
 			( "ميانمار"
@@ -32078,8 +32086,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Namibia"] = Country
+		),
+	Country
 		( "Namibia"
 		, UN
 			( "ناميبيا"
@@ -32248,8 +32256,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Nauru"] = Country
+		),
+	Country
 		( "Nauru"
 		, UN
 			( "ناورو"
@@ -32426,8 +32434,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Nepal"] = Country
+		),
+	Country
 		( "Nepal"
 		, UN
 			( "نيبال"
@@ -32644,8 +32652,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Netherlands"] = Country
+		),
+	Country
 		( "Netherlands"
 		, UN
 			( "هولندا"
@@ -32854,8 +32862,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["New Caledonia"] = Country
+		),
+	Country
 		( "New Caledonia"
 		, UN
 			( "كاليدونيا الجديدة"
@@ -32921,8 +32929,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["New Zealand"] = Country
+		),
+	Country
 		( "New Zealand"
 		, UN
 			( "نيوزيلندا"
@@ -33139,8 +33147,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Nicaragua"] = Country
+		),
+	Country
 		( "Nicaragua"
 		, UN
 			( "نيكاراغوا"
@@ -33341,8 +33349,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Niger"] = Country
+		),
+	Country
 		( "Niger"
 		, UN
 			( "النيجر"
@@ -33471,8 +33479,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Nigeria"] = Country
+		),
+	Country
 		( "Nigeria"
 		, UN
 			( "نيجيريا"
@@ -33833,8 +33841,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Niue"] = Country
+		),
+	Country
 		( "Niue"
 		, UN
 			( "نيوي"
@@ -33900,8 +33908,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Norfolk Island"] = Country
+		),
+	Country
 		( "Norfolk Island"
 		, UN
 			( "جزيرة نورفلك"
@@ -33967,8 +33975,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Northern Mariana Islands"] = Country
+		),
+	Country
 		( "Northern Mariana Islands"
 		, UN
 			( "جزر ماريانا الشمالية"
@@ -34034,8 +34042,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Norway"] = Country
+		),
+	Country
 		( "Norway"
 		, UN
 			( "النرويج"
@@ -34260,8 +34268,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Oman"] = Country
+		),
+	Country
 		( "Oman"
 		, UN
 			( "عمان"
@@ -34398,8 +34406,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Pakistan"] = Country
+		),
+	Country
 		( "Pakistan"
 		, UN
 			( "باكستان"
@@ -34528,8 +34536,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Palau"] = Country
+		),
+	Country
 		( "Palau"
 		, UN
 			( "بالاو"
@@ -34722,8 +34730,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Panama"] = Country
+		),
+	Country
 		( "Panama"
 		, UN
 			( "بنما"
@@ -34884,8 +34892,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Papua New Guinea"] = Country
+		),
+	Country
 		( "Papua New Guinea"
 		, UN
 			( "بابوا غينيا الجديدة"
@@ -35110,8 +35118,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Paraguay"] = Country
+		),
+	Country
 		( "Paraguay"
 		, UN
 			( "باراغواي"
@@ -35320,8 +35328,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Peru"] = Country
+		),
+	Country
 		( "Peru"
 		, UN
 			( "بيرو"
@@ -35594,8 +35602,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Philippines"] = Country
+		),
+	Country
 		( "Philippines"
 		, UN
 			( "الفلبين"
@@ -36436,8 +36444,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Pitcairn"] = Country
+		),
+	Country
 		( "Pitcairn"
 		, UN
 			( "بيتكيرن"
@@ -36503,8 +36511,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Poland"] = Country
+		),
+	Country
 		( "Poland"
 		, UN
 			( "بولندا"
@@ -36697,8 +36705,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Portugal"] = Country
+		),
+	Country
 		( "Portugal"
 		, UN
 			( "البرتغال"
@@ -36923,8 +36931,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Puerto Rico"] = Country
+		),
+	Country
 		( "Puerto Rico"
 		, UN
 			( "بورتوريكو"
@@ -36990,8 +36998,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Qatar"] = Country
+		),
+	Country
 		( "Qatar"
 		, UN
 			( "قطر"
@@ -37112,8 +37120,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Korea, Republic of"] = Country
+		),
+	Country
 		( "Korea, Republic of"
 		, UN
 			( "جمهورية كوريا"
@@ -37306,8 +37314,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Moldova, Republic of"] = Country
+		),
+	Country
 		( "Moldova, Republic of"
 		, UN
 			( "جمهورية مولدوفا"
@@ -37668,8 +37676,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Romania"] = Country
+		),
+	Country
 		( "Romania"
 		, UN
 			( "رومانيا"
@@ -38070,8 +38078,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Russian Federation"] = Country
+		),
+	Country
 		( "Russian Federation"
 		, UN
 			( "الاتحاد الروسي"
@@ -38800,8 +38808,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Rwanda"] = Country
+		),
+	Country
 		( "Rwanda"
 		, UN
 			( "رواندا"
@@ -38906,8 +38914,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Réunion"] = Country
+		),
+	Country
 		( "Réunion"
 		, UN
 			( "ريونيون"
@@ -38973,8 +38981,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Saint Barthélemy"] = Country
+		),
+	Country
 		( "Saint Barthélemy"
 		, UN
 			( "سان بارتليمي"
@@ -39040,8 +39048,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Saint Helena, Ascension and Tristan da Cunha"] = Country
+		),
+	Country
 		( "Saint Helena, Ascension and Tristan da Cunha"
 		, UN
 			( "سانت هيلانة"
@@ -39130,8 +39138,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Saint Kitts and Nevis"] = Country
+		),
+	Country
 		( "Saint Kitts and Nevis"
 		, UN
 			( "سانت كيتس ونيفس"
@@ -39324,8 +39332,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Saint Lucia"] = Country
+		),
+	Country
 		( "Saint Lucia"
 		, UN
 			( "سانت لوسيا"
@@ -39391,8 +39399,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Saint Martin (French part)"] = Country
+		),
+	Country
 		( "Saint Martin (French part)"
 		, UN
 			( "سان مارتن"
@@ -39458,8 +39466,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Saint Pierre and Miquelon"] = Country
+		),
+	Country
 		( "Saint Pierre and Miquelon"
 		, UN
 			( "سان بيار وميكلون"
@@ -39525,8 +39533,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Saint Vincent and the Grenadines"] = Country
+		),
+	Country
 		( "Saint Vincent and the Grenadines"
 		, UN
 			( "سانت فنسنت وجزر غرينادين"
@@ -39639,8 +39647,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Samoa"] = Country
+		),
+	Country
 		( "Samoa"
 		, UN
 			( "ساموا"
@@ -39793,8 +39801,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["San Marino"] = Country
+		),
+	Country
 		( "San Marino"
 		, UN
 			( "سان مارينو"
@@ -39931,8 +39939,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Sao Tome and Principe"] = Country
+		),
+	Country
 		( "Sao Tome and Principe"
 		, UN
 			( "سان تومي وبرينسيبي"
@@ -40013,8 +40021,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret[""] = Country
+		),
+	Country
 		( ""
 		, UN
 			( "سارك"
@@ -40080,8 +40088,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Saudi Arabia"] = Country
+		),
+	Country
 		( "Saudi Arabia"
 		, UN
 			( "المملكة العربية السعودية"
@@ -40250,8 +40258,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Senegal"] = Country
+		),
+	Country
 		( "Senegal"
 		, UN
 			( "السنغال"
@@ -40428,8 +40436,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Serbia"] = Country
+		),
+	Country
 		( "Serbia"
 		, UN
 			( "صربيا"
@@ -40750,8 +40758,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Seychelles"] = Country
+		),
+	Country
 		( "Seychelles"
 		, UN
 			( "سيشيل"
@@ -41016,8 +41024,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Sierra Leone"] = Country
+		),
+	Country
 		( "Sierra Leone"
 		, UN
 			( "سيراليون"
@@ -41114,8 +41122,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Singapore"] = Country
+		),
+	Country
 		( "Singapore"
 		, UN
 			( "سنغافورة"
@@ -41220,8 +41228,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Sint Maarten (Dutch part)"] = Country
+		),
+	Country
 		( "Sint Maarten (Dutch part)"
 		, UN
 			( "سانت مارتن"
@@ -41287,8 +41295,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Slovakia"] = Country
+		),
+	Country
 		( "Slovakia"
 		, UN
 			( "سلوفاكيا"
@@ -41417,8 +41425,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Slovenia"] = Country
+		),
+	Country
 		( "Slovenia"
 		, UN
 			( "سلوفينيا"
@@ -43163,8 +43171,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Solomon Islands"] = Country
+		),
+	Country
 		( "Solomon Islands"
 		, UN
 			( "جزر سليمان"
@@ -43309,8 +43317,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Somalia"] = Country
+		),
+	Country
 		( "Somalia"
 		, UN
 			( "الصومال"
@@ -43519,8 +43527,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["South Africa"] = Country
+		),
+	Country
 		( "South Africa"
 		, UN
 			( "جنوب أفريقيا"
@@ -43657,8 +43665,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["South Georgia and the South Sandwich Islands"] = Country
+		),
+	Country
 		( "South Georgia and the South Sandwich Islands"
 		, UN
 			( "جورجيا الجنوبية وجزر ساندويتش الجنوبية"
@@ -43724,8 +43732,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["South Sudan"] = Country
+		),
+	Country
 		( "South Sudan"
 		, UN
 			( "جنوب السودان"
@@ -43870,8 +43878,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Spain"] = Country
+		),
+	Country
 		( "Spain"
 		, UN
 			( "إسبانيا"
@@ -44488,8 +44496,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Sri Lanka"] = Country
+		),
+	Country
 		( "Sri Lanka"
 		, UN
 			( "سري لانكا"
@@ -44826,8 +44834,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Palestine, State of"] = Country
+		),
+	Country
 		( "Palestine, State of"
 		, UN
 			( "دولة فلسطين"
@@ -45020,8 +45028,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Sudan"] = Country
+		),
+	Country
 		( "Sudan"
 		, UN
 			( "السودان"
@@ -45222,8 +45230,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Suriname"] = Country
+		),
+	Country
 		( "Suriname"
 		, UN
 			( "سورينام"
@@ -45368,8 +45376,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Svalbard and Jan Mayen"] = Country
+		),
+	Country
 		( "Svalbard and Jan Mayen"
 		, UN
 			( "جزر سفالبارد وجان ماين"
@@ -45435,8 +45443,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Sweden"] = Country
+		),
+	Country
 		( "Sweden"
 		, UN
 			( "السويد"
@@ -45669,8 +45677,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Switzerland"] = Country
+		),
+	Country
 		( "Switzerland"
 		, UN
 			( "سويسرا"
@@ -45943,8 +45951,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Syrian Arab Republic"] = Country
+		),
+	Country
 		( "Syrian Arab Republic"
 		, UN
 			( "الجمهورية العربية السورية"
@@ -46121,8 +46129,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Tajikistan"] = Country
+		),
+	Country
 		( "Tajikistan"
 		, UN
 			( "طاجيكستان"
@@ -46211,8 +46219,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Thailand"] = Country
+		),
+	Country
 		( "Thailand"
 		, UN
 			( "تايلند"
@@ -46893,8 +46901,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["North Macedonia"] = Country
+		),
+	Country
 		( "North Macedonia"
 		, UN
 			( "جمهورية مقدونيا اليوغوسلافية سابقاً"
@@ -47631,8 +47639,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Timor-Leste"] = Country
+		),
+	Country
 		( "Timor-Leste"
 		, UN
 			( "تيمور- ليشتي"
@@ -47801,8 +47809,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Togo"] = Country
+		),
+	Country
 		( "Togo"
 		, UN
 			( "توغو"
@@ -47907,8 +47915,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Tokelau"] = Country
+		),
+	Country
 		( "Tokelau"
 		, UN
 			( "توكيلاو"
@@ -47974,8 +47982,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Tonga"] = Country
+		),
+	Country
 		( "Tonga"
 		, UN
 			( "تونغا"
@@ -48080,8 +48088,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Trinidad and Tobago"] = Country
+		),
+	Country
 		( "Trinidad and Tobago"
 		, UN
 			( "ترينيداد وتوباغو"
@@ -48274,8 +48282,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Tunisia"] = Country
+		),
+	Country
 		( "Tunisia"
 		, UN
 			( "تونس"
@@ -48532,8 +48540,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Turkey"] = Country
+		),
+	Country
 		( "Turkey"
 		, UN
 			( "تركيا"
@@ -49246,8 +49254,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Turkmenistan"] = Country
+		),
+	Country
 		( "Turkmenistan"
 		, UN
 			( "تركمانستان"
@@ -49360,8 +49368,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Turks and Caicos Islands"] = Country
+		),
+	Country
 		( "Turks and Caicos Islands"
 		, UN
 			( "جزر تركس وكايكوس"
@@ -49427,8 +49435,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Tuvalu"] = Country
+		),
+	Country
 		( "Tuvalu"
 		, UN
 			( "توفالو"
@@ -49557,8 +49565,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Uganda"] = Country
+		),
+	Country
 		( "Uganda"
 		, UN
 			( "أوغندا"
@@ -50295,8 +50303,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Ukraine"] = Country
+		),
+	Country
 		( "Ukraine"
 		, UN
 			( "أوكرانيا"
@@ -50577,8 +50585,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["United Arab Emirates"] = Country
+		),
+	Country
 		( "United Arab Emirates"
 		, UN
 			( "الإمارات العربية المتحدة"
@@ -50699,8 +50707,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["United Kingdom"] = Country
+		),
+	Country
 		( "United Kingdom"
 		, UN
 			( "المملكة المتحدة لبريطانيا العظمى وآيرلندا الشمالية"
@@ -52557,8 +52565,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Tanzania, United Republic of"] = Country
+		),
+	Country
 		( "Tanzania, United Republic of"
 		, UN
 			( "جمهورية تنزانيا المتحدة"
@@ -52831,8 +52839,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["United States Minor Outlying Islands"] = Country
+		),
+	Country
 		( "United States Minor Outlying Islands"
 		, UN
 			( "نائية التابعة للولايات المتحدة"
@@ -52969,8 +52977,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Virgin Islands, U.S."] = Country
+		),
+	Country
 		( "Virgin Islands, U.S."
 		, UN
 			( "جزر فرجن التابعة للولايات المتحدة"
@@ -53036,8 +53044,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["United States"] = Country
+		),
+	Country
 		( "United States"
 		, UN
 			( "الولايات المتحدة الأمريكية"
@@ -53558,8 +53566,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Uruguay"] = Country
+		),
+	Country
 		( "Uruguay"
 		, UN
 			( "أوروغواي"
@@ -53776,8 +53784,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Uzbekistan"] = Country
+		),
+	Country
 		( "Uzbekistan"
 		, UN
 			( "أوزبكستان"
@@ -53954,8 +53962,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Vanuatu"] = Country
+		),
+	Country
 		( "Vanuatu"
 		, UN
 			( "فانواتو"
@@ -54068,8 +54076,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Venezuela, Bolivarian Republic of"] = Country
+		),
+	Country
 		( "Venezuela, Bolivarian Republic of"
 		, UN
 			( "فنزويلا (جمهورية - البوليفارية)"
@@ -54334,8 +54342,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Viet Nam"] = Country
+		),
+	Country
 		( "Viet Nam"
 		, UN
 			( "فييت نام"
@@ -54912,8 +54920,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Wallis and Futuna"] = Country
+		),
+	Country
 		( "Wallis and Futuna"
 		, UN
 			( "جزر واليس وفوتونا"
@@ -54979,8 +54987,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Western Sahara"] = Country
+		),
+	Country
 		( "Western Sahara"
 		, UN
 			( "الصحراء الغربية"
@@ -55046,8 +55054,8 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-		ret["Yemen"] = Country
+		),
+	Country
 		( "Yemen"
 		, UN
 			( "اليمن"
@@ -55272,8 +55280,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Zambia"] = Country
+		),
+	Country
 		( "Zambia"
 		, UN
 			( "زامبيا"
@@ -55410,8 +55418,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Zimbabwe"] = Country
+		),
+	Country
 		( "Zimbabwe"
 		, UN
 			( "زمبابوي"
@@ -55556,8 +55564,8 @@ Country[string] getCountries() {
 					)
 			]
 			)
-		);
-		ret["Åland Islands"] = Country
+		),
+	Country
 		( "Åland Islands"
 		, UN
 			( "جزر ألاند"
@@ -55623,7 +55631,6 @@ Country[string] getCountries() {
 			, [ 
 			]
 			)
-		);
-	}
-	return ret;
-}
+		),
+];
+
