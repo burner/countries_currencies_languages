@@ -4,7 +4,7 @@ import std.typecons : Nullable;
 
 import countries_currencies_languages.structures;
 
-@safe:
+nothrow @safe:
 Country[string] getCountries() {
 	static Country[string] ret;
 	if(!ret) {

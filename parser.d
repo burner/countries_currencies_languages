@@ -964,7 +964,7 @@ void main() {
 	cf.writeln("module countries_currencies_languages.currencies;\n");
 	cf.writeln("import std.typecons : Nullable;\n");
 	cf.writeln("import countries_currencies_languages.structures;\n");
-	cf.writeln("@safe:");
+	cf.writeln("nothrow @safe:");
 	cf.write("Currency[string] getCurrencies() {\n\tstatic Currency[string] ret;\n");
 	cf.write("\tif(!ret) {\n");
 	{
@@ -978,7 +978,7 @@ void main() {
 	auto lf = File("source/countries_currencies_languages/languages.d", "w");
 	lf.writeln("module countries_currencies_languages.languages;\n");
 	lf.writeln("import countries_currencies_languages.structures;\n");
-	lf.writeln("@safe:");
+	lf.writeln("nothrow @safe:");
 	lf.write("Language[string] getLanguages() {\n\tstatic Language[string] ret;\n");
 	lf.write("\tif(!ret) {\n");
 	{
@@ -992,7 +992,7 @@ void main() {
 	sf.writeln("module countries_currencies_languages.countries;\n");
 	sf.writeln("import std.typecons : Nullable;\n");
 	sf.writeln("import countries_currencies_languages.structures;\n");
-	sf.writeln("@safe:");
+	sf.writeln("nothrow @safe:");
 	sf.write("Country[string] getCountries() {\n\tstatic Country[string] ret;\n");
 	sf.write("\tif(!ret) {\n");
 	{
@@ -1007,7 +1007,7 @@ void main() {
 	auto iff = File("source/countries_currencies_languages/iso639.d", "w");
 	iff.writeln("module countries_currencies_languages.iso639;\n");
 	iff.writeln("import countries_currencies_languages.structures;\n");
-	iff.writeln("@safe:");
+	iff.writeln("nothrow @safe:");
 	iff.write("ISO639[string] getISO639() {\n\tstatic ISO639[string] ret;\n");
 	iff.write("\tif(!ret) {\n");
 	{
