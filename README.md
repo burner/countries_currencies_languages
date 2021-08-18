@@ -43,7 +43,7 @@ struct ISO3166 {
 	/// Numeric codes from ISO 3166-1
 	long numeric;
 	Nullable!string officialName;
-	Subdivision[] subdivision;
+	const(Subdivision)[] subdivision;
 }
 
 /// UN == United Nations
@@ -134,7 +134,7 @@ struct Additional {
 	 * from getLanguages, also these can match ISO639.alpha3 or
 	 * ISO639.alpha3Alternative.
 	 */
-	string[] languages;
+	const(string)[] languages;
 	/// Geoname ID
 	Nullable!long geoNameId;
 	/// Country's customary English short name (CLDR)
@@ -160,7 +160,7 @@ struct Additional {
 	/// Machine-Readable Cataloging codes from the Library of Congress
 	string marc;
 	/// ISO 4217 currency alphabetic code
-	string[] currencies;
+	const(string)[] currencies;
 }
 
 ///
@@ -177,7 +177,7 @@ struct Subdivision {
 	string name;
 	string type;
 	Nullable!string parent;
-	Subdivision[] subdivision;
+	const(Subdivision)[] subdivision;
 }
 
 ///
@@ -234,7 +234,7 @@ struct ISO639 {
 	string inFrench;
 	Scope scope_;
 	Type type;
-	string[] inventedNames;
+	const(string)[] inventedNames;
 }
 ```
 

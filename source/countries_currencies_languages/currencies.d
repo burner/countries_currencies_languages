@@ -8,305 +8,310 @@ import countries_currencies_languages.structures;
 Currency[string] getCurrencies() {
 	static Currency[string] ret;
 	if(!ret) {
-		ret["ADP"] = Currency("ADP", "Andorran Peseta", "", "ADP", 0, 0, Nullable!(int)(20));
-		ret["AED"] = Currency("AED", "United Arab Emirates Dirham", "2", "AED", 2, 0, Nullable!(int)(784));
-		ret["AFA"] = Currency("AFA", "Afghan Afghani (1927–2002)", "", "AFA", 2, 0, Nullable!(int)(4));
-		ret["AFN"] = Currency("AFN", "Afghan Afghani", "2", "AFN", 0, 0, Nullable!(int)(971));
-		ret["ALK"] = Currency("ALK", "Albanian Lek (1946–1965)", "", "ALK", 2, 0, Nullable!(int)(8));
-		ret["ALL"] = Currency("ALL", "Albanian Lek", "2", "ALL", 0, 0, Nullable!(int)(8));
-		ret["AMD"] = Currency("AMD", "Armenian Dram", "2", "AMD", 0, 0, Nullable!(int)(51));
-		ret["ANG"] = Currency("ANG", "Netherlands Antillean Guilder", "2", "ANG", 2, 0, Nullable!(int)(532));
-		ret["AOA"] = Currency("AOA", "Angolan Kwanza", "2", "AOA", 2, 0, Nullable!(int)(973));
-		ret["AOK"] = Currency("AOK", "Angolan Kwanza (1977–1991)", "", "AOK", 2, 0, Nullable!(int)(24));
-		ret["AON"] = Currency("AON", "Angolan New Kwanza (1990–2000)", "", "AON", 2, 0, Nullable!(int)(24));
-		ret["AOR"] = Currency("AOR", "Angolan Readjusted Kwanza (1995–1999)", "", "AOR", 2, 0, Nullable!(int)(982));
-		ret["ARA"] = Currency("ARA", "Argentine Austral", "", "ARA", 2, 0, Nullable!(int)(32));
-		ret["ARL"] = Currency("ARL", "Argentine Peso Ley (1970–1983)", "", "ARL", 2, 0, Nullable!(int).init);
-		ret["ARM"] = Currency("ARM", "Argentine Peso (1881–1970)", "", "ARM", 2, 0, Nullable!(int).init);
-		ret["ARP"] = Currency("ARP", "Argentine Peso (1983–1985)", "", "ARP", 2, 0, Nullable!(int)(32));
-		ret["ARS"] = Currency("ARS", "Argentine Peso", "2", "ARS", 2, 0, Nullable!(int)(32));
-		ret["ATS"] = Currency("ATS", "Austrian Schilling", "", "ATS", 2, 0, Nullable!(int)(40));
-		ret["AUD"] = Currency("AUD", "Australian Dollar", "2", "A$", 2, 0, Nullable!(int)(36));
-		ret["AWG"] = Currency("AWG", "Aruban Florin", "2", "AWG", 2, 0, Nullable!(int)(533));
-		ret["AZM"] = Currency("AZM", "Azerbaijani Manat (1993–2006)", "", "AZM", 2, 0, Nullable!(int)(31));
-		ret["AZN"] = Currency("AZN", "Azerbaijani Manat", "2", "AZN", 2, 0, Nullable!(int)(944));
-		ret["BAD"] = Currency("BAD", "Bosnia-Herzegovina Dinar (1992–1994)", "", "BAD", 2, 0, Nullable!(int)(70));
-		ret["BAM"] = Currency("BAM", "Bosnia-Herzegovina Convertible Mark", "2", "BAM", 2, 0, Nullable!(int)(977));
-		ret["BAN"] = Currency("BAN", "Bosnia-Herzegovina New Dinar (1994–1997)", "", "BAN", 2, 0, Nullable!(int).init);
-		ret["BBD"] = Currency("BBD", "Barbadian Dollar", "2", "BBD", 2, 0, Nullable!(int)(52));
-		ret["BDT"] = Currency("BDT", "Bangladeshi Taka", "2", "BDT", 2, 0, Nullable!(int)(50));
-		ret["BEC"] = Currency("BEC", "Belgian Franc (convertible)", "", "BEC", 2, 0, Nullable!(int)(993));
-		ret["BEF"] = Currency("BEF", "Belgian Franc", "", "BEF", 2, 0, Nullable!(int)(56));
-		ret["BEL"] = Currency("BEL", "Belgian Franc (financial)", "", "BEL", 2, 0, Nullable!(int)(992));
-		ret["BGL"] = Currency("BGL", "Bulgarian Hard Lev", "", "BGL", 2, 0, Nullable!(int)(100));
-		ret["BGM"] = Currency("BGM", "Bulgarian Socialist Lev", "", "BGM", 2, 0, Nullable!(int).init);
-		ret["BGN"] = Currency("BGN", "Bulgarian Lev", "2", "BGN", 2, 0, Nullable!(int)(975));
-		ret["BGO"] = Currency("BGO", "Bulgarian Lev (1879–1952)", "", "BGO", 2, 0, Nullable!(int).init);
-		ret["BHD"] = Currency("BHD", "Bahraini Dinar", "3", "BHD", 3, 0, Nullable!(int)(48));
-		ret["BIF"] = Currency("BIF", "Burundian Franc", "0", "BIF", 0, 0, Nullable!(int)(108));
-		ret["BMD"] = Currency("BMD", "Bermudan Dollar", "2", "BMD", 2, 0, Nullable!(int)(60));
-		ret["BND"] = Currency("BND", "Brunei Dollar", "2", "BND", 2, 0, Nullable!(int)(96));
-		ret["BOB"] = Currency("BOB", "Bolivian Boliviano", "2", "BOB", 2, 0, Nullable!(int)(68));
-		ret["BOL"] = Currency("BOL", "Bolivian Boliviano (1863–1963)", "", "BOL", 2, 0, Nullable!(int).init);
-		ret["BOP"] = Currency("BOP", "Bolivian Peso", "", "BOP", 2, 0, Nullable!(int)(68));
-		ret["BOV"] = Currency("BOV", "Bolivian Mvdol", "", "BOV", 2, 0, Nullable!(int)(984));
-		ret["BRB"] = Currency("BRB", "Brazilian New Cruzeiro (1967–1986)", "", "BRB", 2, 0, Nullable!(int)(76));
-		ret["BRC"] = Currency("BRC", "Brazilian Cruzado (1986–1989)", "", "BRC", 2, 0, Nullable!(int)(76));
-		ret["BRE"] = Currency("BRE", "Brazilian Cruzeiro (1990–1993)", "", "BRE", 2, 0, Nullable!(int)(76));
-		ret["BRL"] = Currency("BRL", "Brazilian Real", "2", "R$", 2, 0, Nullable!(int)(986));
-		ret["BRN"] = Currency("BRN", "Brazilian New Cruzado (1989–1990)", "", "BRN", 2, 0, Nullable!(int)(76));
-		ret["BRR"] = Currency("BRR", "Brazilian Cruzeiro (1993–1994)", "", "BRR", 2, 0, Nullable!(int)(987));
-		ret["BRZ"] = Currency("BRZ", "Brazilian Cruzeiro (1942–1967)", "", "BRZ", 2, 0, Nullable!(int).init);
-		ret["BSD"] = Currency("BSD", "Bahamian Dollar", "2", "BSD", 2, 0, Nullable!(int)(44));
-		ret["BTN"] = Currency("BTN", "Bhutanese Ngultrum", "", "BTN", 2, 0, Nullable!(int)(64));
-		ret["BUK"] = Currency("BUK", "Burmese Kyat", "", "BUK", 2, 0, Nullable!(int)(104));
-		ret["BWP"] = Currency("BWP", "Botswanan Pula", "2", "BWP", 2, 0, Nullable!(int)(72));
-		ret["BYB"] = Currency("BYB", "Belarusian Ruble (1994–1999)", "", "BYB", 2, 0, Nullable!(int)(112));
-		ret["BYN"] = Currency("BYN", "Belarusian Ruble", "2", "BYN", 2, 0, Nullable!(int)(933));
-		ret["BYR"] = Currency("BYR", "Belarusian Ruble (2000–2016)", "", "BYR", 0, 0, Nullable!(int)(974));
-		ret["BZD"] = Currency("BZD", "Belize Dollar", "2", "BZD", 2, 0, Nullable!(int)(84));
-		ret["CAD"] = Currency("CAD", "Canadian Dollar", "2", "CA$", 2, 0, Nullable!(int)(124));
-		ret["CDF"] = Currency("CDF", "Congolese Franc", "2", "CDF", 2, 0, Nullable!(int)(976));
-		ret["CHE"] = Currency("CHE", "WIR Euro", "", "CHE", 2, 0, Nullable!(int)(947));
-		ret["CHF"] = Currency("CHF", "Swiss Franc", "2", "CHF", 2, 0, Nullable!(int)(756));
-		ret["CHW"] = Currency("CHW", "WIR Franc", "", "CHW", 2, 0, Nullable!(int)(948));
-		ret["CLE"] = Currency("CLE", "Chilean Escudo", "", "CLE", 2, 0, Nullable!(int).init);
-		ret["CLF"] = Currency("CLF", "Chilean Unit of Account (UF)", "", "CLF", 4, 0, Nullable!(int)(990));
-		ret["CLP"] = Currency("CLP", "Chilean Peso", "0", "CLP", 0, 0, Nullable!(int)(152));
-		ret["CNH"] = Currency("CNH", "Chinese Yuan (offshore)", "", "CNH", 2, 0, Nullable!(int).init);
-		ret["CNX"] = Currency("CNX", "Chinese People’s Bank Dollar", "", "CNX", 2, 0, Nullable!(int).init);
-		ret["CNY"] = Currency("CNY", "Chinese Yuan", "2", "CN¥", 2, 0, Nullable!(int)(156));
-		ret["COP"] = Currency("COP", "Colombian Peso", "2", "COP", 0, 0, Nullable!(int)(170));
-		ret["COU"] = Currency("COU", "Colombian Real Value Unit", "", "COU", 2, 0, Nullable!(int)(970));
-		ret["CRC"] = Currency("CRC", "Costa Rican Colón", "2", "CRC", 2, 0, Nullable!(int)(188));
-		ret["CSD"] = Currency("CSD", "Serbian Dinar (2002–2006)", "", "CSD", 2, 0, Nullable!(int)(891));
-		ret["CSK"] = Currency("CSK", "Czechoslovak Hard Koruna", "", "CSK", 2, 0, Nullable!(int)(200));
-		ret["CUC"] = Currency("CUC", "Cuban Convertible Peso", "", "CUC", 2, 0, Nullable!(int)(931));
-		ret["CUP"] = Currency("CUP", "Cuban Peso", "", "CUP", 2, 0, Nullable!(int)(192));
-		ret["CVE"] = Currency("CVE", "Cape Verdean Escudo", "2", "CVE", 2, 0, Nullable!(int)(132));
-		ret["CYP"] = Currency("CYP", "Cypriot Pound", "", "CYP", 2, 0, Nullable!(int)(196));
-		ret["CZK"] = Currency("CZK", "Czech Koruna", "2", "CZK", 2, 0, Nullable!(int)(203));
-		ret["DDM"] = Currency("DDM", "East German Mark", "", "DDM", 2, 0, Nullable!(int)(278));
-		ret["DEM"] = Currency("DEM", "German Mark", "", "DEM", 2, 0, Nullable!(int)(276));
-		ret["DJF"] = Currency("DJF", "Djiboutian Franc", "0", "DJF", 0, 0, Nullable!(int)(262));
-		ret["DKK"] = Currency("DKK", "Danish Krone", "2", "DKK", 2, 0, Nullable!(int)(208));
-		ret["DOP"] = Currency("DOP", "Dominican Peso", "2", "DOP", 2, 0, Nullable!(int)(214));
-		ret["DZD"] = Currency("DZD", "Algerian Dinar", "2", "DZD", 2, 0, Nullable!(int)(12));
-		ret["ECS"] = Currency("ECS", "Ecuadorian Sucre", "", "ECS", 2, 0, Nullable!(int)(218));
-		ret["ECV"] = Currency("ECV", "Ecuadorian Unit of Constant Value", "", "ECV", 2, 0, Nullable!(int)(983));
-		ret["EEK"] = Currency("EEK", "Estonian Kroon", "", "EEK", 2, 0, Nullable!(int)(233));
-		ret["EGP"] = Currency("EGP", "Egyptian Pound", "2", "EGP", 2, 0, Nullable!(int)(818));
-		ret["ERN"] = Currency("ERN", "Eritrean Nakfa", "2", "ERN", 2, 0, Nullable!(int)(232));
-		ret["ESA"] = Currency("ESA", "Spanish Peseta (A account)", "", "ESA", 2, 0, Nullable!(int)(996));
-		ret["ESB"] = Currency("ESB", "Spanish Peseta (convertible account)", "", "ESB", 2, 0, Nullable!(int)(995));
-		ret["ESP"] = Currency("ESP", "Spanish Peseta", "", "ESP", 0, 0, Nullable!(int)(724));
-		ret["ETB"] = Currency("ETB", "Ethiopian Birr", "2", "ETB", 2, 0, Nullable!(int)(230));
-		ret["EUR"] = Currency("EUR", "Euro", "2", "€", 2, 0, Nullable!(int)(978));
-		ret["FIM"] = Currency("FIM", "Finnish Markka", "", "FIM", 2, 0, Nullable!(int)(246));
-		ret["FJD"] = Currency("FJD", "Fijian Dollar", "2", "FJD", 2, 0, Nullable!(int)(242));
-		ret["FKP"] = Currency("FKP", "Falkland Islands Pound", "", "FKP", 2, 0, Nullable!(int)(238));
-		ret["FRF"] = Currency("FRF", "French Franc", "", "FRF", 2, 0, Nullable!(int)(250));
-		ret["GBP"] = Currency("GBP", "British Pound", "2", "£", 2, 0, Nullable!(int)(826));
-		ret["GEK"] = Currency("GEK", "Georgian Kupon Larit", "", "GEK", 2, 0, Nullable!(int)(268));
-		ret["GEL"] = Currency("GEL", "Georgian Lari", "2", "GEL", 2, 0, Nullable!(int)(981));
-		ret["GHC"] = Currency("GHC", "Ghanaian Cedi (1979–2007)", "", "GHC", 2, 0, Nullable!(int)(288));
-		ret["GHS"] = Currency("GHS", "Ghanaian Cedi", "2", "GHS", 2, 0, Nullable!(int)(936));
-		ret["GIP"] = Currency("GIP", "Gibraltar Pound", "2", "GIP", 2, 0, Nullable!(int)(292));
-		ret["GMD"] = Currency("GMD", "Gambian Dalasi", "2", "GMD", 2, 0, Nullable!(int)(270));
-		ret["GNF"] = Currency("GNF", "Guinean Franc", "0", "GNF", 0, 0, Nullable!(int)(324));
-		ret["GNS"] = Currency("GNS", "Guinean Syli", "", "GNS", 2, 0, Nullable!(int)(324));
-		ret["GQE"] = Currency("GQE", "Equatorial Guinean Ekwele", "", "GQE", 2, 0, Nullable!(int)(226));
-		ret["GRD"] = Currency("GRD", "Greek Drachma", "", "GRD", 2, 0, Nullable!(int)(300));
-		ret["GTQ"] = Currency("GTQ", "Guatemalan Quetzal", "2", "GTQ", 2, 0, Nullable!(int)(320));
-		ret["GWE"] = Currency("GWE", "Portuguese Guinea Escudo", "", "GWE", 2, 0, Nullable!(int)(624));
-		ret["GWP"] = Currency("GWP", "Guinea-Bissau Peso", "", "GWP", 2, 0, Nullable!(int)(624));
-		ret["GYD"] = Currency("GYD", "Guyanaese Dollar", "2", "GYD", 0, 0, Nullable!(int)(328));
-		ret["HKD"] = Currency("HKD", "Hong Kong Dollar", "2", "HK$", 2, 0, Nullable!(int)(344));
-		ret["HNL"] = Currency("HNL", "Honduran Lempira", "2", "HNL", 2, 0, Nullable!(int)(340));
-		ret["HRD"] = Currency("HRD", "Croatian Dinar", "", "HRD", 2, 0, Nullable!(int)(191));
-		ret["HRK"] = Currency("HRK", "Croatian Kuna", "2", "HRK", 2, 0, Nullable!(int)(191));
-		ret["HTG"] = Currency("HTG", "Haitian Gourde", "", "HTG", 2, 0, Nullable!(int)(332));
-		ret["HUF"] = Currency("HUF", "Hungarian Forint", "2", "HUF", 2, 0, Nullable!(int)(348));
-		ret["IDR"] = Currency("IDR", "Indonesian Rupiah", "2", "IDR", 0, 0, Nullable!(int)(360));
-		ret["IEP"] = Currency("IEP", "Irish Pound", "", "IEP", 2, 0, Nullable!(int)(372));
-		ret["ILP"] = Currency("ILP", "Israeli Pound", "", "ILP", 2, 0, Nullable!(int)(376));
-		ret["ILR"] = Currency("ILR", "Israeli Shekel (1980–1985)", "", "ILR", 2, 0, Nullable!(int)(376));
-		ret["ILS"] = Currency("ILS", "Israeli New Shekel", "2", "₪", 2, 0, Nullable!(int)(376));
-		ret["INR"] = Currency("INR", "Indian Rupee", "2", "₹", 2, 0, Nullable!(int)(356));
-		ret["IQD"] = Currency("IQD", "Iraqi Dinar", "3", "IQD", 0, 0, Nullable!(int)(368));
-		ret["IRR"] = Currency("IRR", "Iranian Rial", "2", "IRR", 0, 0, Nullable!(int)(364));
-		ret["ISJ"] = Currency("ISJ", "Icelandic Króna (1918–1981)", "", "ISJ", 2, 0, Nullable!(int)(352));
-		ret["ISK"] = Currency("ISK", "Icelandic Króna", "0", "ISK", 0, 0, Nullable!(int)(352));
-		ret["ITL"] = Currency("ITL", "Italian Lira", "", "ITL", 0, 0, Nullable!(int)(380));
-		ret["JMD"] = Currency("JMD", "Jamaican Dollar", "2", "JMD", 2, 0, Nullable!(int)(388));
-		ret["JOD"] = Currency("JOD", "Jordanian Dinar", "3", "JOD", 3, 0, Nullable!(int)(400));
-		ret["JPY"] = Currency("JPY", "Japanese Yen", "0", "¥", 0, 0, Nullable!(int)(392));
-		ret["KES"] = Currency("KES", "Kenyan Shilling", "2", "KES", 2, 0, Nullable!(int)(404));
-		ret["KGS"] = Currency("KGS", "Kyrgystani Som", "2", "KGS", 2, 0, Nullable!(int)(417));
-		ret["KHR"] = Currency("KHR", "Cambodian Riel", "2", "KHR", 2, 0, Nullable!(int)(116));
-		ret["KMF"] = Currency("KMF", "Comorian Franc", "0", "KMF", 0, 0, Nullable!(int)(174));
-		ret["KPW"] = Currency("KPW", "North Korean Won", "2", "KPW", 0, 0, Nullable!(int)(408));
-		ret["KRH"] = Currency("KRH", "South Korean Hwan (1953–1962)", "", "KRH", 2, 0, Nullable!(int).init);
-		ret["KRO"] = Currency("KRO", "South Korean Won (1945–1953)", "", "KRO", 2, 0, Nullable!(int).init);
-		ret["KRW"] = Currency("KRW", "South Korean Won", "0", "₩", 0, 0, Nullable!(int)(410));
-		ret["KWD"] = Currency("KWD", "Kuwaiti Dinar", "3", "KWD", 3, 0, Nullable!(int)(414));
-		ret["KYD"] = Currency("KYD", "Cayman Islands Dollar", "2", "KYD", 2, 0, Nullable!(int)(136));
-		ret["KZT"] = Currency("KZT", "Kazakhstani Tenge", "2", "KZT", 2, 0, Nullable!(int)(398));
-		ret["LAK"] = Currency("LAK", "Laotian Kip", "2", "LAK", 0, 0, Nullable!(int)(418));
-		ret["LBP"] = Currency("LBP", "Lebanese Pound", "2", "LBP", 0, 0, Nullable!(int)(422));
-		ret["LKR"] = Currency("LKR", "Sri Lankan Rupee", "2", "LKR", 2, 0, Nullable!(int)(144));
-		ret["LRD"] = Currency("LRD", "Liberian Dollar", "2", "LRD", 2, 0, Nullable!(int)(430));
-		ret["LSL"] = Currency("LSL", "Lesotho Loti", "", "LSL", 2, 0, Nullable!(int)(426));
-		ret["LTL"] = Currency("LTL", "Lithuanian Litas", "", "LTL", 2, 0, Nullable!(int)(440));
-		ret["LTT"] = Currency("LTT", "Lithuanian Talonas", "", "LTT", 2, 0, Nullable!(int)(440));
-		ret["LUC"] = Currency("LUC", "Luxembourgian Convertible Franc", "", "LUC", 2, 0, Nullable!(int)(989));
-		ret["LUF"] = Currency("LUF", "Luxembourgian Franc", "", "LUF", 0, 0, Nullable!(int)(442));
-		ret["LUL"] = Currency("LUL", "Luxembourg Financial Franc", "", "LUL", 2, 0, Nullable!(int)(988));
-		ret["LVL"] = Currency("LVL", "Latvian Lats", "", "LVL", 2, 0, Nullable!(int)(428));
-		ret["LVR"] = Currency("LVR", "Latvian Ruble", "", "LVR", 2, 0, Nullable!(int)(428));
-		ret["LYD"] = Currency("LYD", "Libyan Dinar", "3", "LYD", 3, 0, Nullable!(int)(434));
-		ret["MAD"] = Currency("MAD", "Moroccan Dirham", "2", "MAD", 2, 0, Nullable!(int)(504));
-		ret["MAF"] = Currency("MAF", "Moroccan Franc", "", "MAF", 2, 0, Nullable!(int).init);
-		ret["MCF"] = Currency("MCF", "Monegasque Franc", "", "MCF", 2, 0, Nullable!(int).init);
-		ret["MDC"] = Currency("MDC", "Moldovan Cupon", "", "MDC", 2, 0, Nullable!(int).init);
-		ret["MDL"] = Currency("MDL", "Moldovan Leu", "2", "MDL", 2, 0, Nullable!(int)(498));
-		ret["MGA"] = Currency("MGA", "Malagasy Ariary", "2", "MGA", 0, 0, Nullable!(int)(969));
-		ret["MGF"] = Currency("MGF", "Malagasy Franc", "", "MGF", 0, 0, Nullable!(int)(450));
-		ret["MKD"] = Currency("MKD", "Macedonian Denar", "2", "MKD", 2, 0, Nullable!(int)(807));
-		ret["MKN"] = Currency("MKN", "Macedonian Denar (1992–1993)", "", "MKN", 2, 0, Nullable!(int).init);
-		ret["MLF"] = Currency("MLF", "Malian Franc", "", "MLF", 2, 0, Nullable!(int)(466));
-		ret["MMK"] = Currency("MMK", "Myanmar Kyat", "2", "MMK", 0, 0, Nullable!(int)(104));
-		ret["MNT"] = Currency("MNT", "Mongolian Tugrik", "2", "MNT", 0, 0, Nullable!(int)(496));
-		ret["MOP"] = Currency("MOP", "Macanese Pataca", "2", "MOP", 2, 0, Nullable!(int)(446));
-		ret["MRO"] = Currency("MRO", "Mauritanian Ouguiya", "", "MRO", 0, 0, Nullable!(int)(478));
-		ret["MTL"] = Currency("MTL", "Maltese Lira", "", "MTL", 2, 0, Nullable!(int)(470));
-		ret["MTP"] = Currency("MTP", "Maltese Pound", "", "MTP", 2, 0, Nullable!(int)(470));
-		ret["MUR"] = Currency("MUR", "Mauritian Rupee", "2", "MUR", 0, 0, Nullable!(int)(480));
-		ret["MVR"] = Currency("MVR", "Maldivian Rufiyaa", "2", "MVR", 2, 0, Nullable!(int)(462));
-		ret["MWK"] = Currency("MWK", "Malawian Kwacha", "2", "MWK", 2, 0, Nullable!(int)(454));
-		ret["MXN"] = Currency("MXN", "Mexican Peso", "2", "MX$", 2, 0, Nullable!(int)(484));
-		ret["MXP"] = Currency("MXP", "Mexican Silver Peso (1861–1992)", "", "MXP", 2, 0, Nullable!(int)(484));
-		ret["MXV"] = Currency("MXV", "Mexican Investment Unit", "", "MXV", 2, 0, Nullable!(int)(979));
-		ret["MYR"] = Currency("MYR", "Malaysian Ringgit", "2", "MYR", 2, 0, Nullable!(int)(458));
-		ret["MZE"] = Currency("MZE", "Mozambican Escudo", "", "MZE", 2, 0, Nullable!(int)(508));
-		ret["MZM"] = Currency("MZM", "Mozambican Metical (1980–2006)", "", "MZM", 2, 0, Nullable!(int)(508));
-		ret["MZN"] = Currency("MZN", "Mozambican Metical", "2", "MZN", 2, 0, Nullable!(int)(943));
-		ret["NAD"] = Currency("NAD", "Namibian Dollar", "", "NAD", 2, 0, Nullable!(int)(516));
-		ret["NGN"] = Currency("NGN", "Nigerian Naira", "2", "NGN", 2, 0, Nullable!(int)(566));
-		ret["NIC"] = Currency("NIC", "Nicaraguan Córdoba (1988–1991)", "", "NIC", 2, 0, Nullable!(int)(558));
-		ret["NIO"] = Currency("NIO", "Nicaraguan Córdoba", "2", "NIO", 2, 0, Nullable!(int)(558));
-		ret["NLG"] = Currency("NLG", "Dutch Guilder", "", "NLG", 2, 0, Nullable!(int)(528));
-		ret["NOK"] = Currency("NOK", "Norwegian Krone", "2", "NOK", 2, 0, Nullable!(int)(578));
-		ret["NPR"] = Currency("NPR", "Nepalese Rupee", "2", "NPR", 2, 0, Nullable!(int)(524));
-		ret["NZD"] = Currency("NZD", "New Zealand Dollar", "2", "NZ$", 2, 0, Nullable!(int)(554));
-		ret["OMR"] = Currency("OMR", "Omani Rial", "3", "OMR", 3, 0, Nullable!(int)(512));
-		ret["PAB"] = Currency("PAB", "Panamanian Balboa", "", "PAB", 2, 0, Nullable!(int)(590));
-		ret["PEI"] = Currency("PEI", "Peruvian Inti", "", "PEI", 2, 0, Nullable!(int)(604));
-		ret["PEN"] = Currency("PEN", "Peruvian Sol", "2", "PEN", 2, 0, Nullable!(int)(604));
-		ret["PES"] = Currency("PES", "Peruvian Sol (1863–1965)", "", "PES", 2, 0, Nullable!(int)(604));
-		ret["PGK"] = Currency("PGK", "Papua New Guinean Kina", "2", "PGK", 2, 0, Nullable!(int)(598));
-		ret["PHP"] = Currency("PHP", "Philippine Piso", "2", "PHP", 2, 0, Nullable!(int)(608));
-		ret["PKR"] = Currency("PKR", "Pakistani Rupee", "2", "PKR", 0, 0, Nullable!(int)(586));
-		ret["PLN"] = Currency("PLN", "Polish Zloty", "2", "PLN", 2, 0, Nullable!(int)(985));
-		ret["PLZ"] = Currency("PLZ", "Polish Zloty (1950–1995)", "", "PLZ", 2, 0, Nullable!(int)(616));
-		ret["PTE"] = Currency("PTE", "Portuguese Escudo", "", "PTE", 2, 0, Nullable!(int)(620));
-		ret["PYG"] = Currency("PYG", "Paraguayan Guarani", "0", "PYG", 0, 0, Nullable!(int)(600));
-		ret["QAR"] = Currency("QAR", "Qatari Rial", "2", "QAR", 2, 0, Nullable!(int)(634));
-		ret["RHD"] = Currency("RHD", "Rhodesian Dollar", "", "RHD", 2, 0, Nullable!(int)(716));
-		ret["ROL"] = Currency("ROL", "Romanian Leu (1952–2006)", "", "ROL", 2, 0, Nullable!(int)(642));
-		ret["RON"] = Currency("RON", "Romanian Leu", "2", "RON", 2, 0, Nullable!(int)(946));
-		ret["RSD"] = Currency("RSD", "Serbian Dinar", "2", "RSD", 0, 0, Nullable!(int)(941));
-		ret["RUB"] = Currency("RUB", "Russian Ruble", "2", "RUB", 2, 0, Nullable!(int)(643));
-		ret["RUR"] = Currency("RUR", "Russian Ruble (1991–1998)", "", "RUR", 2, 0, Nullable!(int)(810));
-		ret["RWF"] = Currency("RWF", "Rwandan Franc", "0", "RWF", 0, 0, Nullable!(int)(646));
-		ret["SAR"] = Currency("SAR", "Saudi Riyal", "2", "SAR", 2, 0, Nullable!(int)(682));
-		ret["SBD"] = Currency("SBD", "Solomon Islands Dollar", "2", "SBD", 2, 0, Nullable!(int)(90));
-		ret["SCR"] = Currency("SCR", "Seychellois Rupee", "2", "SCR", 2, 0, Nullable!(int)(690));
-		ret["SDD"] = Currency("SDD", "Sudanese Dinar (1992–2007)", "", "SDD", 2, 0, Nullable!(int)(736));
-		ret["SDG"] = Currency("SDG", "Sudanese Pound", "2", "SDG", 2, 0, Nullable!(int)(938));
-		ret["SDP"] = Currency("SDP", "Sudanese Pound (1957–1998)", "", "SDP", 2, 0, Nullable!(int)(736));
-		ret["SEK"] = Currency("SEK", "Swedish Krona", "2", "SEK", 2, 0, Nullable!(int)(752));
-		ret["SGD"] = Currency("SGD", "Singapore Dollar", "2", "SGD", 2, 0, Nullable!(int)(702));
-		ret["SHP"] = Currency("SHP", "St. Helena Pound", "2", "SHP", 2, 0, Nullable!(int)(654));
-		ret["SIT"] = Currency("SIT", "Slovenian Tolar", "", "SIT", 2, 0, Nullable!(int)(705));
-		ret["SKK"] = Currency("SKK", "Slovak Koruna", "", "SKK", 2, 0, Nullable!(int)(703));
-		ret["SLL"] = Currency("SLL", "Sierra Leonean Leone", "2", "SLL", 0, 0, Nullable!(int)(694));
-		ret["SOS"] = Currency("SOS", "Somali Shilling", "2", "SOS", 0, 0, Nullable!(int)(706));
-		ret["SRD"] = Currency("SRD", "Surinamese Dollar", "2", "SRD", 2, 0, Nullable!(int)(968));
-		ret["SRG"] = Currency("SRG", "Surinamese Guilder", "", "SRG", 2, 0, Nullable!(int)(740));
-		ret["SSP"] = Currency("SSP", "South Sudanese Pound", "2", "SSP", 2, 0, Nullable!(int)(728));
-		ret["STD"] = Currency("STD", "São Tomé & Príncipe Dobra", "", "STD", 0, 0, Nullable!(int)(678));
-		ret["STN"] = Currency("STN", "São Tomé & Príncipe Dobra (2018)", "2", "STN", 2, 0, Nullable!(int).init);
-		ret["SUR"] = Currency("SUR", "Soviet Rouble", "", "SUR", 2, 0, Nullable!(int)(810));
-		ret["SVC"] = Currency("SVC", "Salvadoran Colón", "", "SVC", 2, 0, Nullable!(int)(222));
-		ret["SYP"] = Currency("SYP", "Syrian Pound", "2", "SYP", 0, 0, Nullable!(int)(760));
-		ret["SZL"] = Currency("SZL", "Swazi Lilangeni", "2", "SZL", 2, 0, Nullable!(int)(748));
-		ret["THB"] = Currency("THB", "Thai Baht", "2", "THB", 2, 0, Nullable!(int)(764));
-		ret["TJR"] = Currency("TJR", "Tajikistani Ruble", "", "TJR", 2, 0, Nullable!(int)(762));
-		ret["TJS"] = Currency("TJS", "Tajikistani Somoni", "2", "TJS", 2, 0, Nullable!(int)(972));
-		ret["TMM"] = Currency("TMM", "Turkmenistani Manat (1993–2009)", "", "TMM", 0, 0, Nullable!(int)(795));
-		ret["TMT"] = Currency("TMT", "Turkmenistani Manat", "2", "TMT", 2, 0, Nullable!(int)(934));
-		ret["TND"] = Currency("TND", "Tunisian Dinar", "3", "TND", 3, 0, Nullable!(int)(788));
-		ret["TOP"] = Currency("TOP", "Tongan Paʻanga", "2", "TOP", 2, 0, Nullable!(int)(776));
-		ret["TPE"] = Currency("TPE", "Timorese Escudo", "", "TPE", 2, 0, Nullable!(int)(626));
-		ret["TRL"] = Currency("TRL", "Turkish Lira (1922–2005)", "", "TRL", 0, 0, Nullable!(int)(792));
-		ret["TRY"] = Currency("TRY", "Turkish Lira", "2", "TRY", 2, 0, Nullable!(int)(949));
-		ret["TTD"] = Currency("TTD", "Trinidad & Tobago Dollar", "2", "TTD", 2, 0, Nullable!(int)(780));
-		ret["TWD"] = Currency("TWD", "New Taiwan Dollar", "", "NT$", 2, 0, Nullable!(int)(901));
-		ret["TZS"] = Currency("TZS", "Tanzanian Shilling", "2", "TZS", 0, 0, Nullable!(int)(834));
-		ret["UAH"] = Currency("UAH", "Ukrainian Hryvnia", "2", "UAH", 2, 0, Nullable!(int)(980));
-		ret["UAK"] = Currency("UAK", "Ukrainian Karbovanets", "", "UAK", 2, 0, Nullable!(int)(804));
-		ret["UGS"] = Currency("UGS", "Ugandan Shilling (1966–1987)", "", "UGS", 2, 0, Nullable!(int)(800));
-		ret["UGX"] = Currency("UGX", "Ugandan Shilling", "0", "UGX", 0, 0, Nullable!(int)(800));
-		ret["USD"] = Currency("USD", "US Dollar", "2", "$", 2, 0, Nullable!(int)(840));
-		ret["USN"] = Currency("USN", "US Dollar (Next day)", "", "USN", 2, 0, Nullable!(int)(997));
-		ret["USS"] = Currency("USS", "US Dollar (Same day)", "", "USS", 2, 0, Nullable!(int)(998));
-		ret["UYI"] = Currency("UYI", "Uruguayan Peso (Indexed Units)", "", "UYI", 0, 0, Nullable!(int)(940));
-		ret["UYP"] = Currency("UYP", "Uruguayan Peso (1975–1993)", "", "UYP", 2, 0, Nullable!(int)(858));
-		ret["UYU"] = Currency("UYU", "Uruguayan Peso", "2", "UYU", 2, 0, Nullable!(int)(858));
-		ret["UZS"] = Currency("UZS", "Uzbekistani Som", "2", "UZS", 0, 0, Nullable!(int)(860));
-		ret["VEB"] = Currency("VEB", "Venezuelan Bolívar (1871–2008)", "", "VEB", 2, 0, Nullable!(int)(862));
-		ret["VEF"] = Currency("VEF", "Venezuelan Bolívar", "", "VEF", 2, 0, Nullable!(int)(937));
-		ret["VND"] = Currency("VND", "Vietnamese Dong", "0", "₫", 0, 0, Nullable!(int)(704));
-		ret["VNN"] = Currency("VNN", "Vietnamese Dong (1978–1985)", "", "VNN", 2, 0, Nullable!(int).init);
-		ret["VUV"] = Currency("VUV", "Vanuatu Vatu", "0", "VUV", 0, 0, Nullable!(int)(548));
-		ret["WST"] = Currency("WST", "Samoan Tala", "2", "WST", 2, 0, Nullable!(int)(882));
-		ret["XAF"] = Currency("XAF", "Central African CFA Franc", "0", "FCFA", 0, 0, Nullable!(int)(950));
-		ret["XAG"] = Currency("XAG", "Silver", "", "XAG", 2, 0, Nullable!(int)(961));
-		ret["XAU"] = Currency("XAU", "Gold", "", "XAU", 2, 0, Nullable!(int)(959));
-		ret["XBA"] = Currency("XBA", "European Composite Unit", "", "XBA", 2, 0, Nullable!(int)(955));
-		ret["XBB"] = Currency("XBB", "European Monetary Unit", "", "XBB", 2, 0, Nullable!(int)(956));
-		ret["XBC"] = Currency("XBC", "European Unit of Account (XBC)", "", "XBC", 2, 0, Nullable!(int)(957));
-		ret["XBD"] = Currency("XBD", "European Unit of Account (XBD)", "", "XBD", 2, 0, Nullable!(int)(958));
-		ret["XCD"] = Currency("XCD", "East Caribbean Dollar", "2", "EC$", 2, 0, Nullable!(int)(951));
-		ret["XDR"] = Currency("XDR", "Special Drawing Rights", "", "XDR", 2, 0, Nullable!(int)(960));
-		ret["XEU"] = Currency("XEU", "European Currency Unit", "", "XEU", 2, 0, Nullable!(int)(954));
-		ret["XFO"] = Currency("XFO", "French Gold Franc", "", "XFO", 2, 0, Nullable!(int).init);
-		ret["XFU"] = Currency("XFU", "French UIC-Franc", "", "XFU", 2, 0, Nullable!(int).init);
-		ret["XOF"] = Currency("XOF", "West African CFA Franc", "0", "CFA", 0, 0, Nullable!(int)(952));
-		ret["XPD"] = Currency("XPD", "Palladium", "", "XPD", 2, 0, Nullable!(int)(964));
-		ret["XPF"] = Currency("XPF", "CFP Franc", "0", "CFPF", 0, 0, Nullable!(int)(953));
-		ret["XPT"] = Currency("XPT", "Platinum", "", "XPT", 2, 0, Nullable!(int)(962));
-		ret["XRE"] = Currency("XRE", "RINET Funds", "", "XRE", 2, 0, Nullable!(int).init);
-		ret["XSU"] = Currency("XSU", "Sucre", "", "XSU", 2, 0, Nullable!(int)(994));
-		ret["XTS"] = Currency("XTS", "Testing Currency Code", "", "XTS", 2, 0, Nullable!(int)(963));
-		ret["XUA"] = Currency("XUA", "ADB Unit of Account", "", "XUA", 2, 0, Nullable!(int)(965));
-		ret["XXX"] = Currency("XXX", "Unknown Currency", "", "XXX", 2, 0, Nullable!(int)(999));
-		ret["YDD"] = Currency("YDD", "Yemeni Dinar", "", "YDD", 2, 0, Nullable!(int)(720));
-		ret["YER"] = Currency("YER", "Yemeni Rial", "2", "YER", 0, 0, Nullable!(int)(886));
-		ret["YUD"] = Currency("YUD", "Yugoslavian Hard Dinar (1966–1990)", "", "YUD", 2, 0, Nullable!(int)(891));
-		ret["YUM"] = Currency("YUM", "Yugoslavian New Dinar (1994–2002)", "", "YUM", 2, 0, Nullable!(int)(891));
-		ret["YUN"] = Currency("YUN", "Yugoslavian Convertible Dinar (1990–1992)", "", "YUN", 2, 0, Nullable!(int)(890));
-		ret["YUR"] = Currency("YUR", "Yugoslavian Reformed Dinar (1992–1993)", "", "YUR", 2, 0, Nullable!(int).init);
-		ret["ZAL"] = Currency("ZAL", "South African Rand (financial)", "", "ZAL", 2, 0, Nullable!(int)(991));
-		ret["ZAR"] = Currency("ZAR", "South African Rand", "2", "ZAR", 2, 0, Nullable!(int)(710));
-		ret["ZMK"] = Currency("ZMK", "Zambian Kwacha (1968–2012)", "", "ZMK", 0, 0, Nullable!(int)(894));
-		ret["ZMW"] = Currency("ZMW", "Zambian Kwacha", "2", "ZMW", 2, 0, Nullable!(int)(967));
-		ret["ZRN"] = Currency("ZRN", "Zairean New Zaire (1993–1998)", "", "ZRN", 2, 0, Nullable!(int)(180));
-		ret["ZRZ"] = Currency("ZRZ", "Zairean Zaire (1971–1993)", "", "ZRZ", 2, 0, Nullable!(int)(180));
-		ret["ZWD"] = Currency("ZWD", "Zimbabwean Dollar (1980–2008)", "", "ZWD", 0, 0, Nullable!(int)(716));
-		ret["ZWL"] = Currency("ZWL", "Zimbabwean Dollar (2009)", "2", "ZWL", 2, 0, Nullable!(int)(932));
-		ret["ZWR"] = Currency("ZWR", "Zimbabwean Dollar (2008)", "", "ZWR", 2, 0, Nullable!(int)(935));
+		foreach (ref cur; allCurrencies)
+			ret[cur.currencyCode] = cur;
 	}
 	return ret;
 }
+
+static immutable Currency[] allCurrencies = [
+	Currency("ADP", "Andorran Peseta", "", "ADP", 0, 0, Nullable!(int)(20)),
+	Currency("AED", "United Arab Emirates Dirham", "2", "AED", 2, 0, Nullable!(int)(784)),
+	Currency("AFA", "Afghan Afghani (1927–2002)", "", "AFA", 2, 0, Nullable!(int)(4)),
+	Currency("AFN", "Afghan Afghani", "2", "AFN", 0, 0, Nullable!(int)(971)),
+	Currency("ALK", "Albanian Lek (1946–1965)", "", "ALK", 2, 0, Nullable!(int)(8)),
+	Currency("ALL", "Albanian Lek", "2", "ALL", 0, 0, Nullable!(int)(8)),
+	Currency("AMD", "Armenian Dram", "2", "AMD", 0, 0, Nullable!(int)(51)),
+	Currency("ANG", "Netherlands Antillean Guilder", "2", "ANG", 2, 0, Nullable!(int)(532)),
+	Currency("AOA", "Angolan Kwanza", "2", "AOA", 2, 0, Nullable!(int)(973)),
+	Currency("AOK", "Angolan Kwanza (1977–1991)", "", "AOK", 2, 0, Nullable!(int)(24)),
+	Currency("AON", "Angolan New Kwanza (1990–2000)", "", "AON", 2, 0, Nullable!(int)(24)),
+	Currency("AOR", "Angolan Readjusted Kwanza (1995–1999)", "", "AOR", 2, 0, Nullable!(int)(982)),
+	Currency("ARA", "Argentine Austral", "", "ARA", 2, 0, Nullable!(int)(32)),
+	Currency("ARL", "Argentine Peso Ley (1970–1983)", "", "ARL", 2, 0, Nullable!(int).init),
+	Currency("ARM", "Argentine Peso (1881–1970)", "", "ARM", 2, 0, Nullable!(int).init),
+	Currency("ARP", "Argentine Peso (1983–1985)", "", "ARP", 2, 0, Nullable!(int)(32)),
+	Currency("ARS", "Argentine Peso", "2", "ARS", 2, 0, Nullable!(int)(32)),
+	Currency("ATS", "Austrian Schilling", "", "ATS", 2, 0, Nullable!(int)(40)),
+	Currency("AUD", "Australian Dollar", "2", "A$", 2, 0, Nullable!(int)(36)),
+	Currency("AWG", "Aruban Florin", "2", "AWG", 2, 0, Nullable!(int)(533)),
+	Currency("AZM", "Azerbaijani Manat (1993–2006)", "", "AZM", 2, 0, Nullable!(int)(31)),
+	Currency("AZN", "Azerbaijani Manat", "2", "AZN", 2, 0, Nullable!(int)(944)),
+	Currency("BAD", "Bosnia-Herzegovina Dinar (1992–1994)", "", "BAD", 2, 0, Nullable!(int)(70)),
+	Currency("BAM", "Bosnia-Herzegovina Convertible Mark", "2", "BAM", 2, 0, Nullable!(int)(977)),
+	Currency("BAN", "Bosnia-Herzegovina New Dinar (1994–1997)", "", "BAN", 2, 0, Nullable!(int).init),
+	Currency("BBD", "Barbadian Dollar", "2", "BBD", 2, 0, Nullable!(int)(52)),
+	Currency("BDT", "Bangladeshi Taka", "2", "BDT", 2, 0, Nullable!(int)(50)),
+	Currency("BEC", "Belgian Franc (convertible)", "", "BEC", 2, 0, Nullable!(int)(993)),
+	Currency("BEF", "Belgian Franc", "", "BEF", 2, 0, Nullable!(int)(56)),
+	Currency("BEL", "Belgian Franc (financial)", "", "BEL", 2, 0, Nullable!(int)(992)),
+	Currency("BGL", "Bulgarian Hard Lev", "", "BGL", 2, 0, Nullable!(int)(100)),
+	Currency("BGM", "Bulgarian Socialist Lev", "", "BGM", 2, 0, Nullable!(int).init),
+	Currency("BGN", "Bulgarian Lev", "2", "BGN", 2, 0, Nullable!(int)(975)),
+	Currency("BGO", "Bulgarian Lev (1879–1952)", "", "BGO", 2, 0, Nullable!(int).init),
+	Currency("BHD", "Bahraini Dinar", "3", "BHD", 3, 0, Nullable!(int)(48)),
+	Currency("BIF", "Burundian Franc", "0", "BIF", 0, 0, Nullable!(int)(108)),
+	Currency("BMD", "Bermudan Dollar", "2", "BMD", 2, 0, Nullable!(int)(60)),
+	Currency("BND", "Brunei Dollar", "2", "BND", 2, 0, Nullable!(int)(96)),
+	Currency("BOB", "Bolivian Boliviano", "2", "BOB", 2, 0, Nullable!(int)(68)),
+	Currency("BOL", "Bolivian Boliviano (1863–1963)", "", "BOL", 2, 0, Nullable!(int).init),
+	Currency("BOP", "Bolivian Peso", "", "BOP", 2, 0, Nullable!(int)(68)),
+	Currency("BOV", "Bolivian Mvdol", "", "BOV", 2, 0, Nullable!(int)(984)),
+	Currency("BRB", "Brazilian New Cruzeiro (1967–1986)", "", "BRB", 2, 0, Nullable!(int)(76)),
+	Currency("BRC", "Brazilian Cruzado (1986–1989)", "", "BRC", 2, 0, Nullable!(int)(76)),
+	Currency("BRE", "Brazilian Cruzeiro (1990–1993)", "", "BRE", 2, 0, Nullable!(int)(76)),
+	Currency("BRL", "Brazilian Real", "2", "R$", 2, 0, Nullable!(int)(986)),
+	Currency("BRN", "Brazilian New Cruzado (1989–1990)", "", "BRN", 2, 0, Nullable!(int)(76)),
+	Currency("BRR", "Brazilian Cruzeiro (1993–1994)", "", "BRR", 2, 0, Nullable!(int)(987)),
+	Currency("BRZ", "Brazilian Cruzeiro (1942–1967)", "", "BRZ", 2, 0, Nullable!(int).init),
+	Currency("BSD", "Bahamian Dollar", "2", "BSD", 2, 0, Nullable!(int)(44)),
+	Currency("BTN", "Bhutanese Ngultrum", "", "BTN", 2, 0, Nullable!(int)(64)),
+	Currency("BUK", "Burmese Kyat", "", "BUK", 2, 0, Nullable!(int)(104)),
+	Currency("BWP", "Botswanan Pula", "2", "BWP", 2, 0, Nullable!(int)(72)),
+	Currency("BYB", "Belarusian Ruble (1994–1999)", "", "BYB", 2, 0, Nullable!(int)(112)),
+	Currency("BYN", "Belarusian Ruble", "2", "BYN", 2, 0, Nullable!(int)(933)),
+	Currency("BYR", "Belarusian Ruble (2000–2016)", "", "BYR", 0, 0, Nullable!(int)(974)),
+	Currency("BZD", "Belize Dollar", "2", "BZD", 2, 0, Nullable!(int)(84)),
+	Currency("CAD", "Canadian Dollar", "2", "CA$", 2, 0, Nullable!(int)(124)),
+	Currency("CDF", "Congolese Franc", "2", "CDF", 2, 0, Nullable!(int)(976)),
+	Currency("CHE", "WIR Euro", "", "CHE", 2, 0, Nullable!(int)(947)),
+	Currency("CHF", "Swiss Franc", "2", "CHF", 2, 0, Nullable!(int)(756)),
+	Currency("CHW", "WIR Franc", "", "CHW", 2, 0, Nullable!(int)(948)),
+	Currency("CLE", "Chilean Escudo", "", "CLE", 2, 0, Nullable!(int).init),
+	Currency("CLF", "Chilean Unit of Account (UF)", "", "CLF", 4, 0, Nullable!(int)(990)),
+	Currency("CLP", "Chilean Peso", "0", "CLP", 0, 0, Nullable!(int)(152)),
+	Currency("CNH", "Chinese Yuan (offshore)", "", "CNH", 2, 0, Nullable!(int).init),
+	Currency("CNX", "Chinese People’s Bank Dollar", "", "CNX", 2, 0, Nullable!(int).init),
+	Currency("CNY", "Chinese Yuan", "2", "CN¥", 2, 0, Nullable!(int)(156)),
+	Currency("COP", "Colombian Peso", "2", "COP", 0, 0, Nullable!(int)(170)),
+	Currency("COU", "Colombian Real Value Unit", "", "COU", 2, 0, Nullable!(int)(970)),
+	Currency("CRC", "Costa Rican Colón", "2", "CRC", 2, 0, Nullable!(int)(188)),
+	Currency("CSD", "Serbian Dinar (2002–2006)", "", "CSD", 2, 0, Nullable!(int)(891)),
+	Currency("CSK", "Czechoslovak Hard Koruna", "", "CSK", 2, 0, Nullable!(int)(200)),
+	Currency("CUC", "Cuban Convertible Peso", "", "CUC", 2, 0, Nullable!(int)(931)),
+	Currency("CUP", "Cuban Peso", "", "CUP", 2, 0, Nullable!(int)(192)),
+	Currency("CVE", "Cape Verdean Escudo", "2", "CVE", 2, 0, Nullable!(int)(132)),
+	Currency("CYP", "Cypriot Pound", "", "CYP", 2, 0, Nullable!(int)(196)),
+	Currency("CZK", "Czech Koruna", "2", "CZK", 2, 0, Nullable!(int)(203)),
+	Currency("DDM", "East German Mark", "", "DDM", 2, 0, Nullable!(int)(278)),
+	Currency("DEM", "German Mark", "", "DEM", 2, 0, Nullable!(int)(276)),
+	Currency("DJF", "Djiboutian Franc", "0", "DJF", 0, 0, Nullable!(int)(262)),
+	Currency("DKK", "Danish Krone", "2", "DKK", 2, 0, Nullable!(int)(208)),
+	Currency("DOP", "Dominican Peso", "2", "DOP", 2, 0, Nullable!(int)(214)),
+	Currency("DZD", "Algerian Dinar", "2", "DZD", 2, 0, Nullable!(int)(12)),
+	Currency("ECS", "Ecuadorian Sucre", "", "ECS", 2, 0, Nullable!(int)(218)),
+	Currency("ECV", "Ecuadorian Unit of Constant Value", "", "ECV", 2, 0, Nullable!(int)(983)),
+	Currency("EEK", "Estonian Kroon", "", "EEK", 2, 0, Nullable!(int)(233)),
+	Currency("EGP", "Egyptian Pound", "2", "EGP", 2, 0, Nullable!(int)(818)),
+	Currency("ERN", "Eritrean Nakfa", "2", "ERN", 2, 0, Nullable!(int)(232)),
+	Currency("ESA", "Spanish Peseta (A account)", "", "ESA", 2, 0, Nullable!(int)(996)),
+	Currency("ESB", "Spanish Peseta (convertible account)", "", "ESB", 2, 0, Nullable!(int)(995)),
+	Currency("ESP", "Spanish Peseta", "", "ESP", 0, 0, Nullable!(int)(724)),
+	Currency("ETB", "Ethiopian Birr", "2", "ETB", 2, 0, Nullable!(int)(230)),
+	Currency("EUR", "Euro", "2", "€", 2, 0, Nullable!(int)(978)),
+	Currency("FIM", "Finnish Markka", "", "FIM", 2, 0, Nullable!(int)(246)),
+	Currency("FJD", "Fijian Dollar", "2", "FJD", 2, 0, Nullable!(int)(242)),
+	Currency("FKP", "Falkland Islands Pound", "", "FKP", 2, 0, Nullable!(int)(238)),
+	Currency("FRF", "French Franc", "", "FRF", 2, 0, Nullable!(int)(250)),
+	Currency("GBP", "British Pound", "2", "£", 2, 0, Nullable!(int)(826)),
+	Currency("GEK", "Georgian Kupon Larit", "", "GEK", 2, 0, Nullable!(int)(268)),
+	Currency("GEL", "Georgian Lari", "2", "GEL", 2, 0, Nullable!(int)(981)),
+	Currency("GHC", "Ghanaian Cedi (1979–2007)", "", "GHC", 2, 0, Nullable!(int)(288)),
+	Currency("GHS", "Ghanaian Cedi", "2", "GHS", 2, 0, Nullable!(int)(936)),
+	Currency("GIP", "Gibraltar Pound", "2", "GIP", 2, 0, Nullable!(int)(292)),
+	Currency("GMD", "Gambian Dalasi", "2", "GMD", 2, 0, Nullable!(int)(270)),
+	Currency("GNF", "Guinean Franc", "0", "GNF", 0, 0, Nullable!(int)(324)),
+	Currency("GNS", "Guinean Syli", "", "GNS", 2, 0, Nullable!(int)(324)),
+	Currency("GQE", "Equatorial Guinean Ekwele", "", "GQE", 2, 0, Nullable!(int)(226)),
+	Currency("GRD", "Greek Drachma", "", "GRD", 2, 0, Nullable!(int)(300)),
+	Currency("GTQ", "Guatemalan Quetzal", "2", "GTQ", 2, 0, Nullable!(int)(320)),
+	Currency("GWE", "Portuguese Guinea Escudo", "", "GWE", 2, 0, Nullable!(int)(624)),
+	Currency("GWP", "Guinea-Bissau Peso", "", "GWP", 2, 0, Nullable!(int)(624)),
+	Currency("GYD", "Guyanaese Dollar", "2", "GYD", 0, 0, Nullable!(int)(328)),
+	Currency("HKD", "Hong Kong Dollar", "2", "HK$", 2, 0, Nullable!(int)(344)),
+	Currency("HNL", "Honduran Lempira", "2", "HNL", 2, 0, Nullable!(int)(340)),
+	Currency("HRD", "Croatian Dinar", "", "HRD", 2, 0, Nullable!(int)(191)),
+	Currency("HRK", "Croatian Kuna", "2", "HRK", 2, 0, Nullable!(int)(191)),
+	Currency("HTG", "Haitian Gourde", "", "HTG", 2, 0, Nullable!(int)(332)),
+	Currency("HUF", "Hungarian Forint", "2", "HUF", 2, 0, Nullable!(int)(348)),
+	Currency("IDR", "Indonesian Rupiah", "2", "IDR", 0, 0, Nullable!(int)(360)),
+	Currency("IEP", "Irish Pound", "", "IEP", 2, 0, Nullable!(int)(372)),
+	Currency("ILP", "Israeli Pound", "", "ILP", 2, 0, Nullable!(int)(376)),
+	Currency("ILR", "Israeli Shekel (1980–1985)", "", "ILR", 2, 0, Nullable!(int)(376)),
+	Currency("ILS", "Israeli New Shekel", "2", "₪", 2, 0, Nullable!(int)(376)),
+	Currency("INR", "Indian Rupee", "2", "₹", 2, 0, Nullable!(int)(356)),
+	Currency("IQD", "Iraqi Dinar", "3", "IQD", 0, 0, Nullable!(int)(368)),
+	Currency("IRR", "Iranian Rial", "2", "IRR", 0, 0, Nullable!(int)(364)),
+	Currency("ISJ", "Icelandic Króna (1918–1981)", "", "ISJ", 2, 0, Nullable!(int)(352)),
+	Currency("ISK", "Icelandic Króna", "0", "ISK", 0, 0, Nullable!(int)(352)),
+	Currency("ITL", "Italian Lira", "", "ITL", 0, 0, Nullable!(int)(380)),
+	Currency("JMD", "Jamaican Dollar", "2", "JMD", 2, 0, Nullable!(int)(388)),
+	Currency("JOD", "Jordanian Dinar", "3", "JOD", 3, 0, Nullable!(int)(400)),
+	Currency("JPY", "Japanese Yen", "0", "¥", 0, 0, Nullable!(int)(392)),
+	Currency("KES", "Kenyan Shilling", "2", "KES", 2, 0, Nullable!(int)(404)),
+	Currency("KGS", "Kyrgystani Som", "2", "KGS", 2, 0, Nullable!(int)(417)),
+	Currency("KHR", "Cambodian Riel", "2", "KHR", 2, 0, Nullable!(int)(116)),
+	Currency("KMF", "Comorian Franc", "0", "KMF", 0, 0, Nullable!(int)(174)),
+	Currency("KPW", "North Korean Won", "2", "KPW", 0, 0, Nullable!(int)(408)),
+	Currency("KRH", "South Korean Hwan (1953–1962)", "", "KRH", 2, 0, Nullable!(int).init),
+	Currency("KRO", "South Korean Won (1945–1953)", "", "KRO", 2, 0, Nullable!(int).init),
+	Currency("KRW", "South Korean Won", "0", "₩", 0, 0, Nullable!(int)(410)),
+	Currency("KWD", "Kuwaiti Dinar", "3", "KWD", 3, 0, Nullable!(int)(414)),
+	Currency("KYD", "Cayman Islands Dollar", "2", "KYD", 2, 0, Nullable!(int)(136)),
+	Currency("KZT", "Kazakhstani Tenge", "2", "KZT", 2, 0, Nullable!(int)(398)),
+	Currency("LAK", "Laotian Kip", "2", "LAK", 0, 0, Nullable!(int)(418)),
+	Currency("LBP", "Lebanese Pound", "2", "LBP", 0, 0, Nullable!(int)(422)),
+	Currency("LKR", "Sri Lankan Rupee", "2", "LKR", 2, 0, Nullable!(int)(144)),
+	Currency("LRD", "Liberian Dollar", "2", "LRD", 2, 0, Nullable!(int)(430)),
+	Currency("LSL", "Lesotho Loti", "", "LSL", 2, 0, Nullable!(int)(426)),
+	Currency("LTL", "Lithuanian Litas", "", "LTL", 2, 0, Nullable!(int)(440)),
+	Currency("LTT", "Lithuanian Talonas", "", "LTT", 2, 0, Nullable!(int)(440)),
+	Currency("LUC", "Luxembourgian Convertible Franc", "", "LUC", 2, 0, Nullable!(int)(989)),
+	Currency("LUF", "Luxembourgian Franc", "", "LUF", 0, 0, Nullable!(int)(442)),
+	Currency("LUL", "Luxembourg Financial Franc", "", "LUL", 2, 0, Nullable!(int)(988)),
+	Currency("LVL", "Latvian Lats", "", "LVL", 2, 0, Nullable!(int)(428)),
+	Currency("LVR", "Latvian Ruble", "", "LVR", 2, 0, Nullable!(int)(428)),
+	Currency("LYD", "Libyan Dinar", "3", "LYD", 3, 0, Nullable!(int)(434)),
+	Currency("MAD", "Moroccan Dirham", "2", "MAD", 2, 0, Nullable!(int)(504)),
+	Currency("MAF", "Moroccan Franc", "", "MAF", 2, 0, Nullable!(int).init),
+	Currency("MCF", "Monegasque Franc", "", "MCF", 2, 0, Nullable!(int).init),
+	Currency("MDC", "Moldovan Cupon", "", "MDC", 2, 0, Nullable!(int).init),
+	Currency("MDL", "Moldovan Leu", "2", "MDL", 2, 0, Nullable!(int)(498)),
+	Currency("MGA", "Malagasy Ariary", "2", "MGA", 0, 0, Nullable!(int)(969)),
+	Currency("MGF", "Malagasy Franc", "", "MGF", 0, 0, Nullable!(int)(450)),
+	Currency("MKD", "Macedonian Denar", "2", "MKD", 2, 0, Nullable!(int)(807)),
+	Currency("MKN", "Macedonian Denar (1992–1993)", "", "MKN", 2, 0, Nullable!(int).init),
+	Currency("MLF", "Malian Franc", "", "MLF", 2, 0, Nullable!(int)(466)),
+	Currency("MMK", "Myanmar Kyat", "2", "MMK", 0, 0, Nullable!(int)(104)),
+	Currency("MNT", "Mongolian Tugrik", "2", "MNT", 0, 0, Nullable!(int)(496)),
+	Currency("MOP", "Macanese Pataca", "2", "MOP", 2, 0, Nullable!(int)(446)),
+	Currency("MRO", "Mauritanian Ouguiya", "", "MRO", 0, 0, Nullable!(int)(478)),
+	Currency("MTL", "Maltese Lira", "", "MTL", 2, 0, Nullable!(int)(470)),
+	Currency("MTP", "Maltese Pound", "", "MTP", 2, 0, Nullable!(int)(470)),
+	Currency("MUR", "Mauritian Rupee", "2", "MUR", 0, 0, Nullable!(int)(480)),
+	Currency("MVR", "Maldivian Rufiyaa", "2", "MVR", 2, 0, Nullable!(int)(462)),
+	Currency("MWK", "Malawian Kwacha", "2", "MWK", 2, 0, Nullable!(int)(454)),
+	Currency("MXN", "Mexican Peso", "2", "MX$", 2, 0, Nullable!(int)(484)),
+	Currency("MXP", "Mexican Silver Peso (1861–1992)", "", "MXP", 2, 0, Nullable!(int)(484)),
+	Currency("MXV", "Mexican Investment Unit", "", "MXV", 2, 0, Nullable!(int)(979)),
+	Currency("MYR", "Malaysian Ringgit", "2", "MYR", 2, 0, Nullable!(int)(458)),
+	Currency("MZE", "Mozambican Escudo", "", "MZE", 2, 0, Nullable!(int)(508)),
+	Currency("MZM", "Mozambican Metical (1980–2006)", "", "MZM", 2, 0, Nullable!(int)(508)),
+	Currency("MZN", "Mozambican Metical", "2", "MZN", 2, 0, Nullable!(int)(943)),
+	Currency("NAD", "Namibian Dollar", "", "NAD", 2, 0, Nullable!(int)(516)),
+	Currency("NGN", "Nigerian Naira", "2", "NGN", 2, 0, Nullable!(int)(566)),
+	Currency("NIC", "Nicaraguan Córdoba (1988–1991)", "", "NIC", 2, 0, Nullable!(int)(558)),
+	Currency("NIO", "Nicaraguan Córdoba", "2", "NIO", 2, 0, Nullable!(int)(558)),
+	Currency("NLG", "Dutch Guilder", "", "NLG", 2, 0, Nullable!(int)(528)),
+	Currency("NOK", "Norwegian Krone", "2", "NOK", 2, 0, Nullable!(int)(578)),
+	Currency("NPR", "Nepalese Rupee", "2", "NPR", 2, 0, Nullable!(int)(524)),
+	Currency("NZD", "New Zealand Dollar", "2", "NZ$", 2, 0, Nullable!(int)(554)),
+	Currency("OMR", "Omani Rial", "3", "OMR", 3, 0, Nullable!(int)(512)),
+	Currency("PAB", "Panamanian Balboa", "", "PAB", 2, 0, Nullable!(int)(590)),
+	Currency("PEI", "Peruvian Inti", "", "PEI", 2, 0, Nullable!(int)(604)),
+	Currency("PEN", "Peruvian Sol", "2", "PEN", 2, 0, Nullable!(int)(604)),
+	Currency("PES", "Peruvian Sol (1863–1965)", "", "PES", 2, 0, Nullable!(int)(604)),
+	Currency("PGK", "Papua New Guinean Kina", "2", "PGK", 2, 0, Nullable!(int)(598)),
+	Currency("PHP", "Philippine Piso", "2", "PHP", 2, 0, Nullable!(int)(608)),
+	Currency("PKR", "Pakistani Rupee", "2", "PKR", 0, 0, Nullable!(int)(586)),
+	Currency("PLN", "Polish Zloty", "2", "PLN", 2, 0, Nullable!(int)(985)),
+	Currency("PLZ", "Polish Zloty (1950–1995)", "", "PLZ", 2, 0, Nullable!(int)(616)),
+	Currency("PTE", "Portuguese Escudo", "", "PTE", 2, 0, Nullable!(int)(620)),
+	Currency("PYG", "Paraguayan Guarani", "0", "PYG", 0, 0, Nullable!(int)(600)),
+	Currency("QAR", "Qatari Rial", "2", "QAR", 2, 0, Nullable!(int)(634)),
+	Currency("RHD", "Rhodesian Dollar", "", "RHD", 2, 0, Nullable!(int)(716)),
+	Currency("ROL", "Romanian Leu (1952–2006)", "", "ROL", 2, 0, Nullable!(int)(642)),
+	Currency("RON", "Romanian Leu", "2", "RON", 2, 0, Nullable!(int)(946)),
+	Currency("RSD", "Serbian Dinar", "2", "RSD", 0, 0, Nullable!(int)(941)),
+	Currency("RUB", "Russian Ruble", "2", "RUB", 2, 0, Nullable!(int)(643)),
+	Currency("RUR", "Russian Ruble (1991–1998)", "", "RUR", 2, 0, Nullable!(int)(810)),
+	Currency("RWF", "Rwandan Franc", "0", "RWF", 0, 0, Nullable!(int)(646)),
+	Currency("SAR", "Saudi Riyal", "2", "SAR", 2, 0, Nullable!(int)(682)),
+	Currency("SBD", "Solomon Islands Dollar", "2", "SBD", 2, 0, Nullable!(int)(90)),
+	Currency("SCR", "Seychellois Rupee", "2", "SCR", 2, 0, Nullable!(int)(690)),
+	Currency("SDD", "Sudanese Dinar (1992–2007)", "", "SDD", 2, 0, Nullable!(int)(736)),
+	Currency("SDG", "Sudanese Pound", "2", "SDG", 2, 0, Nullable!(int)(938)),
+	Currency("SDP", "Sudanese Pound (1957–1998)", "", "SDP", 2, 0, Nullable!(int)(736)),
+	Currency("SEK", "Swedish Krona", "2", "SEK", 2, 0, Nullable!(int)(752)),
+	Currency("SGD", "Singapore Dollar", "2", "SGD", 2, 0, Nullable!(int)(702)),
+	Currency("SHP", "St. Helena Pound", "2", "SHP", 2, 0, Nullable!(int)(654)),
+	Currency("SIT", "Slovenian Tolar", "", "SIT", 2, 0, Nullable!(int)(705)),
+	Currency("SKK", "Slovak Koruna", "", "SKK", 2, 0, Nullable!(int)(703)),
+	Currency("SLL", "Sierra Leonean Leone", "2", "SLL", 0, 0, Nullable!(int)(694)),
+	Currency("SOS", "Somali Shilling", "2", "SOS", 0, 0, Nullable!(int)(706)),
+	Currency("SRD", "Surinamese Dollar", "2", "SRD", 2, 0, Nullable!(int)(968)),
+	Currency("SRG", "Surinamese Guilder", "", "SRG", 2, 0, Nullable!(int)(740)),
+	Currency("SSP", "South Sudanese Pound", "2", "SSP", 2, 0, Nullable!(int)(728)),
+	Currency("STD", "São Tomé & Príncipe Dobra", "", "STD", 0, 0, Nullable!(int)(678)),
+	Currency("STN", "São Tomé & Príncipe Dobra (2018)", "2", "STN", 2, 0, Nullable!(int).init),
+	Currency("SUR", "Soviet Rouble", "", "SUR", 2, 0, Nullable!(int)(810)),
+	Currency("SVC", "Salvadoran Colón", "", "SVC", 2, 0, Nullable!(int)(222)),
+	Currency("SYP", "Syrian Pound", "2", "SYP", 0, 0, Nullable!(int)(760)),
+	Currency("SZL", "Swazi Lilangeni", "2", "SZL", 2, 0, Nullable!(int)(748)),
+	Currency("THB", "Thai Baht", "2", "THB", 2, 0, Nullable!(int)(764)),
+	Currency("TJR", "Tajikistani Ruble", "", "TJR", 2, 0, Nullable!(int)(762)),
+	Currency("TJS", "Tajikistani Somoni", "2", "TJS", 2, 0, Nullable!(int)(972)),
+	Currency("TMM", "Turkmenistani Manat (1993–2009)", "", "TMM", 0, 0, Nullable!(int)(795)),
+	Currency("TMT", "Turkmenistani Manat", "2", "TMT", 2, 0, Nullable!(int)(934)),
+	Currency("TND", "Tunisian Dinar", "3", "TND", 3, 0, Nullable!(int)(788)),
+	Currency("TOP", "Tongan Paʻanga", "2", "TOP", 2, 0, Nullable!(int)(776)),
+	Currency("TPE", "Timorese Escudo", "", "TPE", 2, 0, Nullable!(int)(626)),
+	Currency("TRL", "Turkish Lira (1922–2005)", "", "TRL", 0, 0, Nullable!(int)(792)),
+	Currency("TRY", "Turkish Lira", "2", "TRY", 2, 0, Nullable!(int)(949)),
+	Currency("TTD", "Trinidad & Tobago Dollar", "2", "TTD", 2, 0, Nullable!(int)(780)),
+	Currency("TWD", "New Taiwan Dollar", "", "NT$", 2, 0, Nullable!(int)(901)),
+	Currency("TZS", "Tanzanian Shilling", "2", "TZS", 0, 0, Nullable!(int)(834)),
+	Currency("UAH", "Ukrainian Hryvnia", "2", "UAH", 2, 0, Nullable!(int)(980)),
+	Currency("UAK", "Ukrainian Karbovanets", "", "UAK", 2, 0, Nullable!(int)(804)),
+	Currency("UGS", "Ugandan Shilling (1966–1987)", "", "UGS", 2, 0, Nullable!(int)(800)),
+	Currency("UGX", "Ugandan Shilling", "0", "UGX", 0, 0, Nullable!(int)(800)),
+	Currency("USD", "US Dollar", "2", "$", 2, 0, Nullable!(int)(840)),
+	Currency("USN", "US Dollar (Next day)", "", "USN", 2, 0, Nullable!(int)(997)),
+	Currency("USS", "US Dollar (Same day)", "", "USS", 2, 0, Nullable!(int)(998)),
+	Currency("UYI", "Uruguayan Peso (Indexed Units)", "", "UYI", 0, 0, Nullable!(int)(940)),
+	Currency("UYP", "Uruguayan Peso (1975–1993)", "", "UYP", 2, 0, Nullable!(int)(858)),
+	Currency("UYU", "Uruguayan Peso", "2", "UYU", 2, 0, Nullable!(int)(858)),
+	Currency("UZS", "Uzbekistani Som", "2", "UZS", 0, 0, Nullable!(int)(860)),
+	Currency("VEB", "Venezuelan Bolívar (1871–2008)", "", "VEB", 2, 0, Nullable!(int)(862)),
+	Currency("VEF", "Venezuelan Bolívar", "", "VEF", 2, 0, Nullable!(int)(937)),
+	Currency("VND", "Vietnamese Dong", "0", "₫", 0, 0, Nullable!(int)(704)),
+	Currency("VNN", "Vietnamese Dong (1978–1985)", "", "VNN", 2, 0, Nullable!(int).init),
+	Currency("VUV", "Vanuatu Vatu", "0", "VUV", 0, 0, Nullable!(int)(548)),
+	Currency("WST", "Samoan Tala", "2", "WST", 2, 0, Nullable!(int)(882)),
+	Currency("XAF", "Central African CFA Franc", "0", "FCFA", 0, 0, Nullable!(int)(950)),
+	Currency("XAG", "Silver", "", "XAG", 2, 0, Nullable!(int)(961)),
+	Currency("XAU", "Gold", "", "XAU", 2, 0, Nullable!(int)(959)),
+	Currency("XBA", "European Composite Unit", "", "XBA", 2, 0, Nullable!(int)(955)),
+	Currency("XBB", "European Monetary Unit", "", "XBB", 2, 0, Nullable!(int)(956)),
+	Currency("XBC", "European Unit of Account (XBC)", "", "XBC", 2, 0, Nullable!(int)(957)),
+	Currency("XBD", "European Unit of Account (XBD)", "", "XBD", 2, 0, Nullable!(int)(958)),
+	Currency("XCD", "East Caribbean Dollar", "2", "EC$", 2, 0, Nullable!(int)(951)),
+	Currency("XDR", "Special Drawing Rights", "", "XDR", 2, 0, Nullable!(int)(960)),
+	Currency("XEU", "European Currency Unit", "", "XEU", 2, 0, Nullable!(int)(954)),
+	Currency("XFO", "French Gold Franc", "", "XFO", 2, 0, Nullable!(int).init),
+	Currency("XFU", "French UIC-Franc", "", "XFU", 2, 0, Nullable!(int).init),
+	Currency("XOF", "West African CFA Franc", "0", "CFA", 0, 0, Nullable!(int)(952)),
+	Currency("XPD", "Palladium", "", "XPD", 2, 0, Nullable!(int)(964)),
+	Currency("XPF", "CFP Franc", "0", "CFPF", 0, 0, Nullable!(int)(953)),
+	Currency("XPT", "Platinum", "", "XPT", 2, 0, Nullable!(int)(962)),
+	Currency("XRE", "RINET Funds", "", "XRE", 2, 0, Nullable!(int).init),
+	Currency("XSU", "Sucre", "", "XSU", 2, 0, Nullable!(int)(994)),
+	Currency("XTS", "Testing Currency Code", "", "XTS", 2, 0, Nullable!(int)(963)),
+	Currency("XUA", "ADB Unit of Account", "", "XUA", 2, 0, Nullable!(int)(965)),
+	Currency("XXX", "Unknown Currency", "", "XXX", 2, 0, Nullable!(int)(999)),
+	Currency("YDD", "Yemeni Dinar", "", "YDD", 2, 0, Nullable!(int)(720)),
+	Currency("YER", "Yemeni Rial", "2", "YER", 0, 0, Nullable!(int)(886)),
+	Currency("YUD", "Yugoslavian Hard Dinar (1966–1990)", "", "YUD", 2, 0, Nullable!(int)(891)),
+	Currency("YUM", "Yugoslavian New Dinar (1994–2002)", "", "YUM", 2, 0, Nullable!(int)(891)),
+	Currency("YUN", "Yugoslavian Convertible Dinar (1990–1992)", "", "YUN", 2, 0, Nullable!(int)(890)),
+	Currency("YUR", "Yugoslavian Reformed Dinar (1992–1993)", "", "YUR", 2, 0, Nullable!(int).init),
+	Currency("ZAL", "South African Rand (financial)", "", "ZAL", 2, 0, Nullable!(int)(991)),
+	Currency("ZAR", "South African Rand", "2", "ZAR", 2, 0, Nullable!(int)(710)),
+	Currency("ZMK", "Zambian Kwacha (1968–2012)", "", "ZMK", 0, 0, Nullable!(int)(894)),
+	Currency("ZMW", "Zambian Kwacha", "2", "ZMW", 2, 0, Nullable!(int)(967)),
+	Currency("ZRN", "Zairean New Zaire (1993–1998)", "", "ZRN", 2, 0, Nullable!(int)(180)),
+	Currency("ZRZ", "Zairean Zaire (1971–1993)", "", "ZRZ", 2, 0, Nullable!(int)(180)),
+	Currency("ZWD", "Zimbabwean Dollar (1980–2008)", "", "ZWD", 0, 0, Nullable!(int)(716)),
+	Currency("ZWL", "Zimbabwean Dollar (2009)", "2", "ZWL", 2, 0, Nullable!(int)(932)),
+	Currency("ZWR", "Zimbabwean Dollar (2008)", "", "ZWR", 2, 0, Nullable!(int)(935)),
+];
