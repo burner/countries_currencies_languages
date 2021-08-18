@@ -2,7 +2,7 @@ module countries_currencies_languages.iso639;
 
 import countries_currencies_languages.structures;
 
-@safe:
+nothrow @safe:
 ISO639[string] getISO639() {
 	static ISO639[string] ret;
 	if(!ret) {

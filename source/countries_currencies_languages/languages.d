@@ -2,7 +2,7 @@ module countries_currencies_languages.languages;
 
 import countries_currencies_languages.structures;
 
-@safe:
+nothrow @safe:
 Language[string] getLanguages() {
 	static Language[string] ret;
 	if(!ret) {
