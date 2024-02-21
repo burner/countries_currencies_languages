@@ -14,8 +14,7 @@ Country[string] getCountries() {
 	return ret;
 }
 
-@system:
-static immutable Country[] allCountries = cast(immutable) [
+static const Country[] allCountries = [
 	Country
 		( "Taiwan, Province of China"
 		, UN
